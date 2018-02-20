@@ -1,0 +1,57 @@
+.map {
+  position: relative;
+  background: $darkblue;
+  padding-top: 4rem;
+  padding-bottom: 8rem;
+  h2 {
+    margin-bottom: 3rem;
+  }
+  #map {
+    min-height: 300px;
+    margin-bottom: 3rem;
+  }
+  h5 {
+    color: $cream;
+    padding-left: 2rem;
+    margin-bottom: 2rem;
+  }
+  .address-info {
+    padding-left: 5rem;
+    p {
+      color: $cream;
+      position: relative;
+      font-size: 1rem;
+      &:before {
+        left: -3rem;
+        height: 1.5rem;
+        width: 1.5rem;
+        content: '';
+        position: absolute;
+      }
+    }
+    .address {
+      &:before {
+        background: url('../images/icon-map-point.svg') center no-repeat;
+        background-size: contain;
+      }
+    }
+    .email {
+      &:before {
+        background: url('../images/icon-email.svg') center no-repeat;
+        background-size: contain;
+      }
+    }
+    .phone {
+      padding: 2rem 0;
+      font-weight: 500;
+
+      &:before {
+        background: url('../images/icon-phone.svg') center no-repeat;
+        background-size: contain;
+      }
+    }
+  }
+  a {
+    color: $cream;
+  }
+}

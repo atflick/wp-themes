@@ -1,0 +1,103 @@
+.text-block {
+  position: relative;
+
+  background: #fff;
+
+  .slant-bg {
+    background-size: contain;
+    overflow: hidden;
+    position: absolute;
+    height: calc(100% + 50px);
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    background: #fff;
+    &.mobile {
+      background: rgba(255,255,255,0);
+      @include breakpoint(mobile) {
+        background: #fff;
+      }
+    }
+    &.dimmer {
+      @include breakpoint(mobile) {
+        opacity: .4;
+      }
+    }
+    -webkit-clip-path: polygon(0 0, 100% 50px, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 50px, 100% 100%, 0% 100%);
+    // @include breakpoint(tablet) {
+    //   -webkit-clip-path: polygon(0 0, 100% 15%, 100% 100%, 0% 100%);
+    //   clip-path: polygon(0 0, 100% 15%, 100% 100%, 0% 100%);
+    //   height: 120%;
+    //
+    // }
+    // @include breakpoint(mobile) {
+    //   -webkit-clip-path: polygon(0 0, 100% 10%, 100% 100%, 0% 100%);
+    //   clip-path: polygon(0 0, 100% 10%, 100% 100%, 0% 100%);
+    //   height: 115%;
+    //   &.mobile {
+    //     background: rgba(255,255,255,.7);
+    //   }
+    // }
+    @include breakpoint(smallmobile) {
+      -webkit-clip-path: polygon(0 0, 100% 25px, 100% 100%, 0% 100%);
+      clip-path: polygon(0 0, 100% 25px, 100% 100%, 0% 100%);
+      height: calc(100% + 25px);
+    }
+  }
+  .inner {
+    @include sidepadding(20%, 15%, 15%, 2rem);
+    @include vertpadding(6rem, 5rem, 4rem, 4rem);
+    z-index: 5;
+    a {
+      color: $blue;
+      text-decoration: underline;
+    }
+    &:after {
+
+    }
+    &.under-orangeline::after {
+      width: 90%;
+      display: block;
+      height: 3px;
+      background: $accentorange;
+      content: "";
+      margin: 0 auto;
+    }
+    &.blueline::after {
+      width: 60%;
+      display: block;
+      height: 3px;
+      background: $blue;
+      content: "";
+      margin: 0 auto;
+    }
+  }
+  h3 {
+    text-align: center;
+    font-style: italic;
+    color: $darkblue;
+    margin-bottom: 2rem;
+    line-height: 2.5rem;
+    font-size: 1.75rem;
+  }
+
+  .bg-pattern {
+    position: absolute;
+    left: -20px;
+    top: -3rem;
+    height: calc(100% + 3rem);
+    width: 200px;
+    z-index: 3;
+    @include breakpoint(tablet) {
+      top: -2rem;
+      height: calc(100% + 2rem);
+    }
+    @include breakpoint(mobile) {
+      top: -.5rem;
+      height: calc(100% + .5rem);
+      left: -50px;
+    }
+  }
+
+}

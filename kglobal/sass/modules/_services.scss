@@ -1,0 +1,65 @@
+.services {
+  h2 {
+    padding: 5rem 0rem 4rem;
+    color: $darkblue;
+
+  }
+  .service {
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0rem;
+    border-bottom: 1px solid $blue;
+    &:last-child {
+      border-bottom: none;
+    }
+    .open-button {
+      cursor: pointer;
+      background: url(../../dist/images/expand.svg) no-repeat center center;
+      background-size: contain;
+      height: 30px;
+      width: 30px;
+    }
+  }
+  .service-detail {
+    display: none;
+    opacity: 0;
+    padding: 1rem 0rem;
+    transition: opacity ease .7s;
+    &.open {
+      opacity: 1;
+    }
+    > div > div:first-of-type {
+      padding-right: 1.5rem;
+      @include breakpoint(mobile) {
+        padding-right: 0;
+      }
+    }
+    ol,ul{
+			margin-left:1.5rem;
+			padding: .5rem 0;
+			li{
+				padding-left:.5rem;
+			}
+		}
+		ol{
+			list-style-type: decimal;
+		}
+		ul{
+			list-style:initial;
+		}
+		li{
+			font-weight:300;
+			color:$darkblue;
+			padding:.1rem 0;
+		}
+  }
+  .service-container {
+
+    background: $cream;
+    @include sidepadding(15%, 10%, 4rem, 2rem);
+    @include vertpadding(5rem, 4rem, 4rem, 2rem);
+  }
+  h5 {
+    font-size: 1.5rem;
+  }
+}

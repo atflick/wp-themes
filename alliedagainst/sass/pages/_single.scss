@@ -1,0 +1,141 @@
+.single.post-container {
+  background: #fff;
+  > div {
+    padding: 2rem 3rem 0;
+    flex-wrap: nowrap;
+    @include breakpoint(tablet) {
+      padding: 2rem 0rem;
+    }
+    @include breakpoint(mobile) {
+      flex-wrap: wrap;
+      flex-direction: column;
+    }
+    aside {
+      padding: .5rem 1.5rem .5rem 0;
+      @include breakpoint(mobile) {
+        padding-right: 0;
+      }
+      h6 {
+        color: $primarycolor;
+      }
+      .logo {
+        width: 95%;
+        max-width: 250px;
+      }
+      .categories {
+        a {
+          &:after {
+            content: ", ";
+            position: relative;
+
+          }
+          &:last-child {
+            &:after {
+              content: "";
+            }
+          }
+          span {
+            border-bottom: 2px solid $primarycolor;
+            &:hover {
+              border-bottom: 2px solid $secondarycolor;
+            }
+          }
+        }
+      }
+    }
+    p {
+      color: $primarycolor;
+    }
+    .content {
+      max-width: 700px;
+      flex: 2;
+    }
+  }
+  &.resource-type {
+    max-width: none;
+  }
+  .pdf-viewer {
+    margin: 2rem 0;
+  }
+}
+
+.social {
+  background: #fff;
+  padding:.8rem 0;
+  display: inline-flex;
+  flex-direction: row;
+  > a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: .8rem;
+    &:last-child {
+      margin-right: 0
+    }
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    &.facebook, &.twitter, &.email, &.download {
+      background: $cream;
+    }
+    &.facebook {
+      img {
+        height: 25px;
+      }
+    }
+    &.twitter {
+      img {
+        width: 25px;
+      }
+    }
+    &.email {
+      img {
+        height: 25px;
+        width: 25px;
+      }
+    }
+    &.download {
+      img {
+        height: 23px;
+        width: 30px;
+                position: relative;
+                top: -2px;
+      }
+    }
+  }
+}
+
+.related-posts {
+  background: #fff;
+  > h3 {
+    display: block;
+    max-width: 1100px;
+    width: 100%;
+    text-align: left;
+    margin: 0 auto;
+  }
+  .related-posts-container {
+    width: 100%;
+    max-width: 11000px;
+    margin: 0 auto;
+    padding: 2rem;
+    justify-content: center;
+    @include breakpoint(tablet) {
+      padding: 2rem 0;
+      max-width: 100%;
+    }
+    .news-card, .resource, .partner, .disposal-location-card {
+      background: $cream;
+      p{
+        color: $primarycolor;
+      }
+    }
+
+  }
+}
+
+.base-page-content {
+  p,h1,h2,h3,h4,h5,h6 {
+    color: $primarycolor;
+  }
+}

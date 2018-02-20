@@ -1,0 +1,76 @@
+.login-link {
+  margin: 5px 0 0;
+  padding: 0 24px;
+
+  a {
+    color: $blue;
+    font-size: 13px;
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.new-user-form {
+  width: 475px;
+  margin: 2rem auto;
+  label {
+    color: #72777c;
+    display: block;
+  }
+  input {
+    width: 100%;
+    font-size: 24px !important;
+    width: 100%;
+    padding: 3px !important;
+    margin: 2px 6px 16px 0;
+  }
+  @include breakpoint(mobile) {
+    width: 375px;
+  }
+  a div{
+    background: url(../images/logo-default.png) center no-repeat;
+    background-size: cover;
+    width: 250px;
+    height: 100px;
+    margin: 0 auto;
+  }
+  h2 {
+    color: $secondarycolor;
+    font-size: 2rem;
+    text-align: center;
+  }
+  .wpforms-submit {
+    width: 100% !important;
+    background: #0085ba !important;
+    margin-top: 2rem;
+    height: 40px;
+    background: #0085ba;
+    border-color: #0073aa #006799 #006799;
+    -webkit-box-shadow: 0 1px 0 #006799;
+    box-shadow: 0 1px 0 #006799;
+    color: #fff;
+    text-decoration: none;
+    text-shadow: 0 -1px 1px #006799, 1px 0 1px #006799, 0 1px 1px #006799, -1px 0 1px #006799;
+    border-radius: 3px;
+    font-size: 13px;
+  }
+}
+body.login {
+  height: 100vh;
+  background: #f1f1f1;
+}
+a:focus {
+  outline: none;
+}
+.new-user-email {
+  label {
+    display: block;
+  }
+  input {
+    font-size: 24px !important;
+    width: 100%;
+    padding: 3px !important;
+    margin: 2px 6px 16px 0;
+  }
+}

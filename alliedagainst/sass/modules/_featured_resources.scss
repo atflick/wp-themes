@@ -1,0 +1,74 @@
+.featured-resources{
+    // background: $tertiarycolor;
+    // .featured-resources-header {
+    //     @include breakpoint(tablet){
+    //         width: 70%;
+    //     }
+    //     @include breakpoint(mobile){
+    //         width: 100%;
+    //     }
+    //     h2, p {
+    //         color: $primarycolor;
+    //     }
+    //     h2 {
+    //         text-align: center;
+    //         border-bottom: 3px solid $primarycolor;
+    //         padding-bottom: 1rem;
+    //     }
+    //     img.icon {
+    //         margin: 2rem 0rem;
+    //     }
+    // }
+    .outer-container{
+        &:nth-child(odd){
+        background: $lightsecondary;
+        }
+        &:nth-child(even){
+            background: $secondarycolor;
+            .featured-resource-container {
+              > p, > h2 {
+                color: $tertiarycolor;
+              }
+              h2 {
+                border-bottom: 5px solid $tertiarycolor;
+              }
+            }
+        }
+    }
+    .featured-resource-container {
+        margin: 2rem 0rem;
+        width: 80%;
+        max-width: 1100px;
+        @include breakpoint(tablet){
+            width: 100%;
+        }
+        p {
+            color: $primarycolor;
+            margin: .5rem 0rem 1.5rem;
+            width: 80%;
+        @include breakpoint(tablet){
+            width: 100%;
+        }
+        }
+        h2 {
+            border-bottom: 5px solid $primarycolor;
+            padding: 1rem;
+            text-align: center;
+            width: 80%;
+        @include breakpoint(tablet){
+            width: 100%;
+        }
+        }
+        .resources-container {
+            align-items: flex-start;
+            justify-content: center;
+            margin: 0;
+            width: 100%;
+            .resource {
+                @include breakpoint(tablet){
+                    margin: 1rem;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,44 @@
+.contact-us {
+  background: $lightergreen;
+  > div {
+    max-width: 800px;
+    width: 100%;
+    text-align: center;
+  }
+  .wpforms-confirmation-container-full{
+     background: none;
+    border: 3px solid $secondarycolor;
+    p {
+      color: $primarycolor;
+    }
+    }  
+  h2 {
+    display: inline-flex;
+    padding: 1rem 4rem;
+    border-bottom: 5px solid $primarycolor;
+    margin-bottom: 1rem;
+    @include breakpoint(mobile) {
+      padding: 1rem 1rem;
+    }
+  }
+
+  #wpforms-301-field_4 {
+    li {
+      text-align: left;
+      position: relative;
+      label {
+        font-family: $regularfont !important;
+      }
+      &:after {
+        position: absolute;
+        right: 0;
+        content: '* denotes required field';
+        font-style: italic;
+        font-size: .8rem;
+        color: $primarycolor;
+        font-family: $regularfont
+      }
+    }
+  }
+}
+

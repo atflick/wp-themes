@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="16px" height="15px" viewBox="0 0 16 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>Bitmap</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect x="99.9909091" y="0" width="15" height="15" id="rect-1"></rect>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Disposal-Locations-Design" transform="translate(-877.000000, -1431.000000)">
+            <g id="Group-4-Copy" transform="translate(729.000000, 1415.000000)">
+                <g id="Group-4" transform="translate(49.000000, 16.000000)">
+                    <g id="Bitmap">
+                        <image x="99.9909091" y="0" width="15" height="15" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIQAAACECAYAAABRRIOnAAAABGdBTUEAA1teXP8meAAABVhJREFUeAHt3T+vFUUYx3GvEQJIYUJBRYKxtaGytjbmNlJY8EIIHR1vwlBpqYaAURNjoS00vgN67AgBEngewiY7h825M7PPzD7P7HeTyTl7zs6/33zunnvv+XfyEVtNAp9Lpf+kXKqp7LnOx54Hx9j6JwCI/pm77hEQrpen/+AA0T9z1z0CwvXy9B8cIPpn7rpHQLhenv6DA0T/zF33CAjXy9N/cIDon7nrHgFRtzwnUu1iXVXftXRibOUJXJYq30r5pLyqSY3X0oo+n3JHynDPp5gktLNGrsh8/5HypkHZWZTxp3tNpvC4AYQJV/yEdjSD1hgUBVuQBHpgAAQYPvg9JEgk+x1mrzMDv0MEMNYbAw8ZjlFYYHgh85t+8nMvHUey36FZYPhX4rsNiPiILDDo/ymuSrkJiNggrDBoO7rdkpL7UPHuOP1f/EOtyZadwDk58kcp97Nr5B2oi/irlBt5hy8e9URuPZXydPHezBuLBEmbez/+F8ngs8xscw+zPjNM/RafIbTi3he4ZP4/SV4XprSNLlth0OEBQkIoWeCSY6NhAAQY1ECycYaQOEp+6nOOjXhmmFQAwhhEZAyKAhCGIKJjAAQY1ECycYaQOHJ+Lzh2zAhnhkkFIFaCGAmDogDEChCjYagCUfO+grvS02/a20CbPoTo8wAvDed0Tdpy8dxE6ZyOPZ4u3fd9aQc7PF4xrH2pvNbXdtZsxQ8ZNW/lqzmrrJlUtLphzwwadA2IaAvUc7yhMQDClkp4DICwAzEEBkDYgBgGAyDWgxgKAyDWgRgOAyDqQQyJARB1IIbFAIhyEENjAEQZiOExACIfxC4wACIPxG4wAOJsELvCAIjjIEbAUPw5pDyVvYxiBAw6s1dSni9PcflWQHyYi1cM+um5+nkP96XoC5dytgdy0Jc5B86PWXpV1LHbbs0rD3ZdMXh4pdNhrPoG45+l/H14R4v9Y4u/dN+oIDxj0BcA61p0+SyPpUU/dtuIICJgAESL0+FCm1EwAGJh8axvioQBENarf9BeNAyAOFhAy92IGABhKWDWVlQMgJgtotXVyBgAYaXgfTvRMQDCEIRXDJ/KHKd/OumCn1X4x5QBCq8YdGpfZSCYI2kOYvT3dioGz2/JL356WhW13EYG4R1Dy3WtbntUEGCoJDEiCDBUYtBqo4EAwwoMo4EAw0oMI4EAgwGGUUCAwQjDCCDAYIghOggwGGOIDAIMDTBEBQGGRhgiggBDQwzRQIChMYZIIMDQAUMUEGDohCECCDB0xOAdxHUZoOcXt3Reqj7deX2287xM/wcpm38xep9l8NOLVxD6QRf3pDyrjEq/HedUytPK+rut5hWEvrD0dyn6ARmlKMCwgrNXENOU/ipEAYYpucpL7yB0WrkowFCJYF4tAog5iv/ng59dB8MsjDVXo4DQOeqZ4jsph79TgEHTMdoigdApHz58gMEIwtRMNBATCv3u0D+knErhT0tNxWiL+jmViuFPKfrnKZthAhHPENP0wTAlYXgZGYRhDDQ1JQCIKQku3yUACCAkCQAiiYMdQGAgSQAQSRzsAAIDSQKASOJgBxAYSBIARBIHO4DAQJIAIJI42AEEBpIEAJHEwQ4gMJAkAIgkDnYAgYEkAUAkcbADCAwkCQAiiYMdQGAgSQAQSRzs1IB4SWxmCbwwa8mooZo36nwtfesnvLCtT+CL9U3YtqBfAsYbXmwzbdnaI2n8m5Yd1DxktBwPbW+cACA2XgBv3QPC24psPB5AbLwA3roHhLcV2Xg8gNh4Abx1DwhvK7LxeACx8QJ46x4Q3lZk4/EAYuMF8NY9ILytyMbjeQuWJ/UDpPIXBwAAAABJRU5ErkJggg=="></image>
+                        <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#rect-1"></use>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

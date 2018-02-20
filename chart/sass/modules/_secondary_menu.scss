@@ -1,0 +1,38 @@
+.secondary-menu{
+	background:#FFFFFF;
+	position:relative;
+	z-index:9;
+	width:100%;
+	@include transition(all 0.3s ease);
+	top:0;
+	box-shadow: 0 0 30px #ccc;
+
+	.flex-container{
+		justify-content: center;
+	}
+	@include breakpoint(tablet){
+		display:none;
+	}
+	@include breakpoint(mobile){
+		display:none;
+	}
+
+	&.sticky{
+		position:fixed;
+		top: 80px;
+	}
+	.flex-padding{
+		padding:0 5rem;
+	}
+	a{
+	    padding: 1.3rem 1.5rem;
+	    display: inline-block;
+			font-size: .9rem;
+    	text-transform: uppercase;
+			opacity: .5;
+			font-weight: bold;
+	    &.active,&:hover{
+	    	opacity:1;
+	    }
+	}
+}

@@ -1,0 +1,89 @@
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+
+}
+
+.delay {
+  -webkit-animation-delay: .5s;
+  animation-delay: .5s;
+  @include breakpoint(mobile) {
+    -webkit-animation-delay: 0;
+    animation-delay: 0;
+  }
+}
+
+.animated.infinite {
+  animation-iteration-count: infinite;
+}
+
+.animated.hinge {
+  animation-duration: 2s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+}
+
+
+@keyframes hero-line {
+  from {
+   left: -300px;
+   height: 5%;
+   opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    height: 20%;
+  }
+  to {
+    left: -10px;
+    height: 100%;
+  }
+}
+
+@keyframes grow {
+  from {
+   top: 50%;
+   height: 0%;
+   opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  to {
+    top: 0%;
+    height: 100%;
+  }
+}
+@keyframes fade-in-left {
+  from {
+   left: 100%;
+   opacity: 0;
+  }
+  50% {
+    opacity: 30%;
+  }
+  90% {
+    opacity: 1;
+
+  }
+  to {
+    left: 0%;
+
+  }
+}
+
+.hero-line {
+  animation-name: hero-line;
+}

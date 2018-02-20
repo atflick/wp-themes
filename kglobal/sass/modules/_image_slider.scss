@@ -1,0 +1,35 @@
+.image-slider {
+  background: $cream;
+  .blurb-content {
+    padding-right: 1.5rem;
+    @include breakpoint(mobile) {
+      padding-right: 0;
+      margin-bottom: 2rem;
+    }
+    p {
+      width: 100%;
+      font-size: 1rem;
+    }
+  }
+
+  .image-slider-container {
+    // height: 500px;
+    .image {
+      width: 100%;
+      height: 100%;
+      > div {
+        // height: 500px;
+        padding-top: 60%;
+      }
+    }
+    // @include breakpoint(mobile) {
+    //   height: 80vh;
+    //   .image > div {
+    //     height: 80vh;
+    //   }
+    // }
+  }
+  .slick-track, .slick-slide {
+    height: 100%;
+  }
+}

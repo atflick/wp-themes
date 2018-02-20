@@ -1,0 +1,48 @@
+@media print{
+
+	@page {
+	  size: A4;
+	  margin: 6rem 2rem;
+	}
+	* {
+		background: none !important;
+		// height: auto !important;
+		padding: 0 !important;
+	}
+	.nav-links, .get-updates, .related-posts, .footer-main-container, .pdf-viewer {
+		display: none !important;
+	}
+	section {
+		height: auto !important;
+		min-height: auto !important;
+	}
+	.flex-container {
+		height: auto !important;
+		> div {
+			width: 100% !important;
+		}
+	}
+	aside {
+		width: 100% !important;
+	}
+	p,h1,h2,h3,h4,h5,h6,li{
+		color:#000 !important;
+	}
+	p, h1, h2 {
+		margin-bottom: 1rem !important;
+	}
+	h1 {
+		font-size: 2rem !important;
+	}
+	h2 {
+		font-size: 1.8rem !important;
+	}
+	.single.post-container{
+		padding: 0;
+		>div {
+			flex-wrap: wrap;
+		}
+
+	}
+
+}

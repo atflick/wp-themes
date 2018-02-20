@@ -1,0 +1,105 @@
+.twitter-feed {
+  > .flex-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  .button-container {
+    padding: .5rem 0;
+    justify-content: center;
+    .button {
+      width: 100%;
+      background: $cream;
+      color: $secondarycolor;
+      font-family: $demifont;
+      padding: 1rem 25px 1rem 0 !important;
+      max-width: 300px;
+      display: flex;
+      justify-content: center;
+      font-size: .9rem;
+    }
+  }
+  h3 {
+    width: 100%;
+    text-align: left;
+    color: $secondarycolor;
+    margin-bottom: 2rem;
+  }
+  .ctf-error-admin, .ctf-error {
+    display: none !important;
+  }
+  .ctf-type-usertimeline {
+    // max-width: 650px;
+
+    display: flex !important;
+    flex-direction: column;
+    flex-wrap: nowrap !important;
+    justify-content: center !important;
+    align-items: center;
+    .ctf-header {
+      display: none !important;
+    }
+    .ctf-tweets {
+      width: 100% !important;
+    }
+    * {
+      color: $primarycolor !important;
+    }
+    .ctf-item {
+      border-top: none !important;
+    }
+    .ctf-author-avatar {
+
+    }
+    .ctf-tweet-actions {
+      * {
+        color: gray !important;
+      }
+    }
+    .ctf-retweet-icon {
+      background-color: $secondarycolor !important;
+    }
+    .ctf-more {
+      border-radius: 30px !important;
+  		padding: 1rem 3rem !important;
+  		text-transform: uppercase !important;
+      width: auto !important;
+      max-width: 200px !important;
+      background: $secondarycolor !important;
+      display: inline-block !important;
+      font-size: .9rem !important;
+      span {
+        font-size: .9rem !important;
+    		font-family: $demifont !important;
+        color: #fff !important;
+      }
+    }
+    .ctf-reply, .ctf-retweet, .ctf-like, .ctf-twitterlink {
+      padding: 1rem 3rem 2px 5px !important;
+      @include breakpoint(mobile) {
+        padding: 1rem 1rem 2px 5px !important;
+      }
+    }
+    .ctf-context, .ctf-tweet-actions, {
+      margin-left: calc(2rem + 80px) !important;
+      @include breakpoint(smallmobile) {
+        margin-left: calc(2rem + 35px) !important;
+      }
+    }
+    .ctf-author-avatar {
+      width: 80px !important;
+      height: 80px !important;
+      border-radius: 50% !important;
+      margin-right: 2rem !important;
+      @include breakpoint(smallmobile) {
+        width: 50px !important;
+        height: 50px !important;
+        margin-right: 4px !important;
+      }
+      img {
+        width: 100% !important;
+        height: 100% !important;
+      }
+    }
+  }
+}

@@ -1,0 +1,91 @@
+h1,h2,h3,h4,h5{
+	@include primaryfont();
+	line-height:120%;
+	@include transition(all 0.3s ease);
+
+	&.darkprimary{
+		color:$primarycolor;
+	}
+}
+
+h1{
+	font-size:3.6rem;
+	color: #fff;
+	@include secondaryfont();
+	margin-bottom:1rem;
+
+	@include breakpoint(mobile){
+		font-size:2.5rem;
+	}
+}
+h2{
+	color:$primarycolor;
+	font-size: 2.3rem;
+	@include secondaryfont();
+    @include breakpoint(mobile){
+		font-size:2rem;
+	}
+}
+h3{
+	font-size:1.8rem;
+	color:$primarycolor;
+	font-family: $headersfont;
+	@include breakpoint(mobile){
+		font-size: 1.5rem;
+	}
+	font-weight: bold;
+}
+h4{
+	font-size:.9rem;
+	@include primaryfont();
+	color: #fff;
+	font-weight:800;
+	text-transform: uppercase;
+}
+h5{
+	font-size:1.2rem;
+	font-weight:500;
+	margin: .5rem 0;
+}
+
+h6{
+		text-transform: uppercase;
+    font-size: .9rem;
+    color: #aaa;
+    font-weight: 500;
+    margin: .3rem 0;
+}
+
+label{
+	color:$primarycolor;
+	font-weight:bold;
+}
+
+p{
+	color: #fff;
+    @include primaryfont();
+    font-size: 1.3rem;
+	line-height: 1.9rem;
+    padding:.5rem 0;
+    @include breakpoint(mobile){
+		font-size:1.2rem;
+		line-height: 1.8rem;
+    }
+		&:empty {
+			display: none !important;
+		}
+}
+strong, b {
+	font-family: $headersfont;
+}
+em, i {
+	font-style: italic;
+}
+a{
+	text-decoration:none;
+	color:$primarycolor;
+	@include transition(all 0.3s ease);
+	&:hover{
+		opacity:0.9;
+	}
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="17px" height="17px" viewBox="0 0 17 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>caret</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Search-Results" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-1194.000000, -648.000000)" stroke-linecap="square">
+        <g id="caret" transform="translate(1202.168706, 656.627031) scale(1, -1) rotate(265.000000) translate(-1202.168706, -656.627031) translate(1195.168706, 649.127031)" stroke="#06496B" stroke-width="1">
+            <path d="M1.40587587,0.316398005 L12.4133441,14.7881602" id="Line"></path>
+            <path d="M13.6973421,1.38725144 L0.110878344,13.8252739" id="Line-2"></path>
+        </g>
+    </g>
+</svg>

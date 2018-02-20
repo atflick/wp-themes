@@ -1,0 +1,244 @@
+.disposal-location-card {
+    background: #fff;
+    padding: 1.6rem 1rem;
+    width: 300px;
+    position: relative;
+    margin-top: 2rem;
+    margin: 2rem 1rem 0 1rem;
+    // height: 0;
+    min-height: 260px;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: flex-start;
+    @include transition(all .2s ease);
+    animation-name: swingin;
+    animation-duration: .5s;
+
+    &:hover .button-container > a {
+              &:after{
+                width: 10px;
+                height: 10px;
+              }
+    }
+    @include breakpoint(smallmobile){
+        width: 100%;
+    }
+    .title-box {
+      width: 100%;
+      // align-items: center;
+      justify-content: space-around;
+      flex-grow: 1;
+    }
+    h3 {
+        font-size: 1rem;
+    }
+    .button-container {
+      padding-bottom: 0;
+        a {
+            font-size: .7rem;
+            position:relative;
+            &:after{
+              content: "";
+              @include transition(all .2s ease);
+              background-image: url(../images/open_icon.png);
+              background-size: cover;
+              background-repeat: no-repeat;
+              background-position: center center;
+              width: 0px;
+              height: 0px;
+              position: absolute;
+              right: 28px;
+              @include breakpoint(mobile){
+                width: 10px;
+                height: 10px;
+                right: 22px;
+              }
+            }
+        }
+        width: 100% !important;
+    }
+    h6 {
+      color: $primarycolor;
+      width: 100%;
+      font-size: .9rem;
+      top: -1rem;
+      position: relative;
+    }
+}
+
+
+.resource {
+    margin: 0rem 1rem 2rem;
+    background: #fff;
+    padding: 2rem 1rem;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: space-around;
+    min-height: 250px;
+    width: 220px;
+    @include transition(all .2s ease);
+    animation-name: swingin;
+    animation-duration: .5s;
+    &:hover {
+
+        cursor: pointer;
+    }
+    // &:hover .resource-path {
+    //       stroke-dasharray: 800;
+    //       stroke-dashoffset:800;
+    //       fill-opacity: 0;
+    //       animation: dash 1s linear forwards;
+    // }
+    @include breakpoint(tablet) {
+      margin: 0rem 1rem 1rem 1rem;
+      &:nth-child(odd) {
+        margin: 0rem 0rem 1rem 0rem;
+      }
+    }
+    @include breakpoint(smallmobile) {
+      margin: 0rem 0rem 1rem 0rem;
+    }
+    img.icon {
+        width: 90px;
+        height: 90px;
+        margin: 0 auto 1rem;
+    }
+    a {
+        width: 100%;
+        font-size: 1rem;
+        font-family: $headersfont;
+        text-align: center;
+        text-decoration:underline;
+        text-decoration-color:$primarycolor;
+    }
+    h6 {
+      color: $primarycolor;
+      width: 100%;
+      text-align: left;
+      top: -1.5rem;
+      position: relative;
+    }
+}
+
+.news-card {
+  border: 0 solid;
+  border-radius: 20px;
+  background: $tertiarycolor;
+  padding: 2rem 2.2rem;
+  margin: 1rem 0;
+  flex-wrap: nowrap;
+  transition: .3s ease all;
+  // box-shadow: 0px 0px 0px rgba(0,0,0,.3);
+  // &:hover {
+  //   box-shadow: 0px 0px 15px rgba(50,50,50,.3);
+  // }
+  @include breakpoint(mobile) {
+
+    flex-direction: column;
+    padding: 1.5rem 1.7rem;
+  }
+  .btn {
+    min-width: 230px;
+    @include breakpoint(mobile) {
+      margin-top: 1rem;
+    }
+  }
+  h6 {
+    width: 100%;
+    color: $primarycolor;
+    margin-bottom: 2rem;
+    margin-top: 0;
+    padding-left: calc(1rem + 5px);
+    @include breakpoint(mobile) {
+      padding-left: 0;
+    }
+    span {
+      margin: 0 .5rem;
+    }
+  }
+
+  h3, p {
+    color: $primarycolor;
+  }
+  h3 {
+    line-height: 100%;
+    margin-bottom: .5rem;
+  }
+  p {
+    position: relative;
+    padding-bottom: 0;
+    padding-top: .5rem;
+    top: 5px;
+    &.card-subtitle {
+      font-style: italic;
+    }
+  }
+  > div:first-of-type > div{
+    border-left: 5px solid $primarycolor;
+    padding-left: 1rem;
+  }
+}
+
+.partner {
+    margin: 0rem 1rem 2rem;
+    background: #fff;
+    padding: 2rem 2rem;
+    border-radius: 10px;
+    align-items: center;
+    min-height: 200px;
+    max-width: 300px;
+    width: 300px;
+
+    @include breakpoint(tablet) {
+      margin: 0rem 1rem 2rem;
+    }
+    @include breakpoint(mobile) {
+      margin: 0rem auto 2rem;
+      width: 80%;
+      max-width: 100%;
+      img.icon {
+        width: 70%;
+      }
+    }
+    @include breakpoint(smallmobile) {
+      width: 80%;
+    }
+    img.icon {
+        width: 100%;
+        height: auto;
+        max-height: 150px;
+        margin: 0 auto 1rem;
+        flex: 0 0 auto;  /* IE */
+        object-fit: scale-down;
+        @include breakpoint(mobile) {
+          width: 70%;
+          max-width: 250px;
+        }
+    }
+    p {
+      color: $primarycolor;
+      width: 100%;
+      flex-grow: 2;
+      font-size: 1rem;
+      @include breakpoint(smallmobile) {
+        font-size: 1.1rem;
+      }
+      line-height: 120%;
+      margin: 0;
+    }
+    .button-container {
+      padding-bottom: 0;
+    }
+}
+
+
+@keyframes swingin{
+  from {
+    @include transform(scale(.2));
+    opacity: 0;
+  }
+  to {
+    @include transform(scale(1));
+    opacity: 1;
+  }
+}

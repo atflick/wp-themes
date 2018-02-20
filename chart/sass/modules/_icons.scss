@@ -1,0 +1,43 @@
+.icons-module{
+	text-align:center;
+	.icon-item{
+		margin-bottom:3rem;
+		padding:0 2rem;
+		&:hover {
+			h6 {
+				color: $secondarycolor;
+			}
+		}
+	}
+	.icon-name{
+		@include breakpoint(tablet){
+			font-size: 1.2rem;
+		}
+	}
+	.icon-image{
+		border-radius: 50%;
+	    box-shadow: 2px 17px 16px #ddd;
+	    margin-bottom: 2rem;
+	    line-height: 0;
+	    background: #ddd;
+	    max-width:200px;
+	    text-align:center;
+	    margin:0 auto 2rem;
+	    @include breakpoint(mobile){
+	    	max-width:150px;
+	    }
+	}
+	img{
+		width:100%;
+		height:auto;
+		line-height:0;
+
+		@include transition(all 0.3s ease);
+		position:relative;
+		top:0;
+		&:hover{
+			top:-2rem;
+		}
+
+	}
+}

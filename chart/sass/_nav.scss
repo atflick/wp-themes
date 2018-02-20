@@ -1,0 +1,169 @@
+.header-nav {
+  .menu {
+    > li {
+      display: inline-block;
+      a {
+        padding-bottom: 2px;
+      }
+    }
+  }
+
+  .menu-item {
+    position: relative;
+    padding: .7rem 1rem;
+    a {
+      border-bottom: 3px solid rgba(0,0,0,0);
+    }
+
+    a:hover {
+      border-bottom: 3px solid $primarycolor;
+    }
+
+    &:hover {
+      .sub-menu {
+        display: block;
+      }
+    }
+    @include breakpoint(tablet) {
+      padding: 0;
+      a:hover {
+        border-bottom: 1px solid rgba(0,0,0,.2);
+      }
+    }
+  }
+
+  .menu-item-has-children {
+    background: url(../images/icons/icon-dropdown-arrow.png) center bottom 5px no-repeat !important;
+    &:hover {
+      background: $primarycolor url(../images/icons/icon-dropdown-arrow.png) center bottom 5px no-repeat !important;
+    }
+    a:hover {
+      border-bottom: 3px solid rgba(0,0,0,0);
+
+    }
+    @include breakpoint(tablet) {
+      background: url(../images/icons/icon-dropdown-arrow.png) center top 35px no-repeat !important;
+      &:hover {
+        background: url(../images/icons/icon-dropdown-arrow.png) center top 35px no-repeat !important;
+      }
+      a:hover {
+        border-bottom: 1px solid rgba(0,0,0,.2);
+      }
+    }
+    @include breakpoint(mobile) {
+      background: url(../images/icons/icon-dropdown-arrow.png) center top 30px no-repeat !important;
+      &:hover {
+        background: url(../images/icons/icon-dropdown-arrow.png) center top 30px no-repeat !important;
+      }
+    }
+    &.current_page_item {
+      a {
+        border-bottom: 3px solid rgba(0,0,0,0) !important;
+      }
+    }
+  }
+
+  .sub-menu {
+    display: none;
+    background: $lightprimary;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    overflow: hidden;
+    @include breakpoint(tablet) {
+      width: 100%;
+    }
+    > li {
+      text-align: center;
+      display: block;
+      &:hover {
+        background: $darkprimary;
+      }
+      a {
+
+        @include breakpoint(tablet) {
+          border-bottom: 3px solid rgba(0,0,0,0) !important;
+          background: rgba(255,255,255,.05);
+        }
+      }
+    }
+
+    > .current_page_item a {
+      color: #fff;
+      border-bottom: 3px solid rgba(0,0,0,0) !important;
+      @include breakpoint(tablet) {
+        border-bottom: 3px solid rgba(0,0,0,0.2) !important;
+      }
+    }
+    @include breakpoint(tablet) {
+      background: none;
+      position: relative;
+      top: 0;
+      display: block;
+
+      li:hover {
+        background: none;
+      }
+    }
+  }
+}
+
+.site-footer {
+  .sub-menu {
+    padding-left: 8px;
+  }
+}
+
+.member-menu {
+  > li {
+    position: relative;
+    a {
+      position: relative;
+      z-index: 5;
+    }
+  }
+  > li > img {
+    top: 15px;
+    width: 15px;
+    position: absolute;
+    right: 15px;
+    z-index: 4;
+    &.flipped {
+      transform: rotate(180deg);
+    }
+  }
+
+}
+
+.multiple-hospital-nav {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  background: $primarycolor;
+  border: 3px solid $primarycolor;
+  border-radius: 5px;
+  max-height: 400px;
+  overflow: scroll;
+  a {
+    text-align: left;
+    display: block;
+    text-transform: uppercase;
+    color:rgba(255,255,255,1);
+    font-size: .8rem;
+    font-weight: 400;
+    padding: .2rem .8rem;
+  }
+  @include breakpoint(tablet) {
+    background: none;
+    position: relative;
+    border: none;
+
+    a {
+      text-align: center;
+      width: 100%;
+      font-size: 1rem;
+      padding: .75rem 0;
+    }
+  }
+}

@@ -1,0 +1,263 @@
+$mobile-nav-breakpoint: 1000px;
+
+header.header{
+	height: 92px;
+	position: absolute;
+	z-index: 100;
+	align-items: center;
+	display: flex;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	transition: all .3s ease;
+	background: linear-gradient(rgba(0,0,0,.9), rgba(0,0,0,.6) 40%, transparent);
+	@include sidepadding(5%, 3rem, 2rem, 1rem);
+	justify-content: center;
+	&.scrolled {
+		// @include grad(rgba(0,0,0,1),rgba(0,0,0,.05));
+		height: 65px;
+	}
+	@include breakpoint($mobile-nav-breakpoint) {
+		justify-content: flex-start;
+		align-items: flex-start;
+		height: 60px;
+		background: $kglobalgray;
+		overflow: hidden;
+		transition: height .3s ease;
+	}
+	.logo {
+		@include breakpoint($mobile-nav-breakpoint) {
+			display: flex;
+			align-items: center;
+			width: 100%;
+			height: 60px;
+		}
+	}
+	nav {
+		width: 70%;
+		.menu {
+			display: flex;
+			li {
+				display: inline-block;
+				position: relative;
+			}
+			> li {
+				margin-right: 1.2rem;
+				margin-left: 1.2rem;
+				@include breakpoint(verylarge) {
+					// margin-right: 1.7rem;
+					// margin-left: 1.7rem;
+				}
+				@include breakpoint(1300px) {
+					margin-right: .7rem;
+					margin-left: .7rem;
+				}
+				@include breakpoint(1150px) {
+					margin-right: .5rem;
+					margin-left: .5rem;
+				}
+			}
+			.current_page_item {
+				> a {
+					border-bottom: 2px solid $secondarycolor;
+				}
+			}
+			.menu-item-has-children {
+				position: relative;
+				.sub-menu {
+					position: absolute;
+					display: none;
+					top: 125%;
+					@include grad(rgba(0,0,0,.2), rgba(0,0,0,0.8));
+					li {
+						width: 100%;
+						text-align: center;
+						padding: .5rem 0;
+
+					}
+					padding-bottom: .5rem;
+					@include breakpoint($mobile-nav-breakpoint) {
+						background: $kglobalgray;
+					}
+					@include breakpoint(mobile) {
+						top: 0;
+					}
+				}
+				&:hover {
+					.sub-menu {
+						display: block;
+					}
+				}
+			}
+
+			@include breakpoint($mobile-nav-breakpoint) {
+				opacity: 0;
+				transition: opacity .5s ease;
+				flex-direction: column;
+				li {
+					display: block;
+					padding: .5rem 0;
+					text-align: center;
+					margin-right: 0;
+					margin-left: 0;
+					a {
+						font-size: 1.6rem;
+
+					}
+				}
+				.menu-item-has-children {
+					position: relative;
+					.sub-menu {
+						position: relative;
+						display: block;
+						padding-bottom: 0;
+						li {
+							left: -.4rem;
+						}
+						a {
+							&:before {
+								content: "–";
+								margin-right: .4rem;
+								color: $secondarycolor;
+							}
+						}
+
+					}
+					&:hover {
+						.sub-menu {
+							display: block;
+						}
+					}
+				}
+			}
+		}
+		a {
+			font-weight: 600;
+			color: $cream;
+			font-size: 1.1rem;
+			padding-bottom: 4px;
+			position: relative;
+			&:after {
+				content: "";
+				position: absolute;
+				bottom: -2px;
+				left: 0;
+				height: 2px;
+				width: 0%;
+				background: $secondarycolor;
+				transition: all .3s ease;
+			}
+			&:hover {
+				opacity: 1;
+				&:after {
+					opacity: 1;
+					width: 100%;
+				}
+			}
+		}
+		@include breakpoint($mobile-nav-breakpoint) {
+			width: 100%;
+			justify-content: center;
+		}
+	}
+	.social-search {
+		position: relative;
+		justify-content: flex-end;
+		a {
+			display: flex;
+			align-items: center;
+			opacity: 1;
+			transition: opacity .4s ease;
+		}
+		a, div {
+			margin-left: 1rem;
+			color: $cream;
+		}
+		@include breakpoint($mobile-nav-breakpoint) {
+			width: 100%;
+			justify-content: center;
+			a, div {
+				margin: .7rem;
+			}
+		}
+	}
+	&.open {
+		height: 100vh;
+		.menu {
+			opacity: 1;
+		}
+	}
+	.search-input {
+		width: 0%;
+		overflow: hidden;
+		position: absolute;
+		transition: all .3s ease;
+		right: 2rem;
+		top: -.75rem;
+		.search-container {
+
+		}
+		form > div {
+			display: flex;
+			justify-content: space-between;
+			input[type=text] {
+				width: 100%;
+				background: rgba(0,0,0,.2);
+				color: #fff !important;
+				&::-webkit-input-placeholder {
+					color: #fff !important;
+				}
+				&::-moz-placeholder {
+					color: #fff !important;
+				}
+				&:-ms-input-placeholder {
+					color: #fff !important;
+				}
+				&:-moz-placeholder {
+					color: #fff !important;
+				}
+			}
+			input[type=submit] {
+				display: none;
+				width: 55px;
+				background: url('../images/icon-search.svg') center no-repeat;
+				background-size: 4	5%;
+				color: rgba(0,0,0,0);
+				border: none;
+				cursor: pointer;
+			}
+		}
+		@include breakpoint(1000px) {
+			right: 0;
+			top: 50%;
+			justify-content: center;
+			form {
+				width: auto;
+				max-width: 300px;
+			}
+			form > div {
+
+				width: 100%;
+			}
+		}
+		&.open {
+			width: 100%;
+			@include breakpoint(1000px) {
+				width: 100%;
+			}
+		}
+	}
+}
+
+.nav-padding {
+	padding-top: 90px;
+}
+#search-icon {
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	img {
+		width: 18px;
+	}
+}

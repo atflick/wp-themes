@@ -1,0 +1,30 @@
+.text-learn{
+	background:$lightgray;
+
+	p{
+		padding:0;
+	}
+
+	.flex-padding{
+		padding:5rem;
+	}
+
+	.module-content{
+		@include breakpoint(mobile){
+			text-align: center;
+		}
+	}
+}
+
+.module{
+	.learn-more{
+		padding:1.2rem 4rem 1.2rem 2rem;
+		background:$primarycolor;
+		color:#fff;
+
+		&:hover{
+			background:$primarycolor;
+			opacity:.8;
+		}
+	}
+}

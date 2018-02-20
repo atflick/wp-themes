@@ -1,0 +1,195 @@
+.ticket_list{
+  font-size:.9rem;
+  th{
+    font-size:.9rem;
+  }
+  td{
+    font-size:.9rem;
+  }
+}
+
+
+.support_bs{
+  .btn-primary {
+    border: none !important;
+    border-color: none !important;
+    &:hover {
+      opacity: .9;
+    }
+  }
+  ul.nav-tabs{
+    padding:0 !important;
+    margin-bottom: 10px;
+    li.active{
+      margin-bottom:-2px;
+    }
+  }
+}
+#tab_faq {
+  // display: none;
+}
+
+.label{
+  font-size: .75rem!important;
+  font-weight: normal !important;
+}
+
+#ticketContainer{
+  font-size:.8rem !important;
+}
+#theadReplyContainer{
+  background:none !important;
+  padding:0 !important;
+}
+
+#replyFloatedContainer,.replyFloatedContainer{
+  margin: 20px 0;
+  // display: flex;
+  // display: -webkit-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  width: 100%;
+}
+.replyFloatRight {
+  margin-top: 22px !important;
+  @media only screen and (max-width : 1400px) {
+    float: left !important;
+    margin-top: 10px !important;
+  }
+}
+.wpsp_frm_attachment_container{
+  background:none !important;
+      padding: 6px 0;
+}
+.wpsp_reply{
+  width:auto !important;
+  margin-right: 2rem;
+}
+#reply_bcc {
+  width: 100% !important;
+}
+.replyCC {
+  margin-bottom: 10px !important;
+}
+#wpsp_reply_attachment{
+      margin-top: 5px !important;
+      // margin-bottom:3rem;
+}
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover{
+    background: #B4DCDA!important;
+    border: none;
+    color: #000 !important;
+}
+.ui-state-active .ui-icon, .ui-button:active .ui-icon,.threadHeader, .replyUserInfo tr{
+  background:none !important;
+}
+
+.avatar{
+  border-radius: 50%;
+}
+
+.support_bs button, .support_bs input[type="button"], .support_bs input[type="reset"], .support_bs input[type="submit"]{
+  background:$primarycolor !important;
+  text-transform: capitalize;
+}
+
+.wpsp_stats_box{
+  li{
+    padding:0 !important;
+
+    .wpsp_stat_text {
+      font-size: 1rem;
+      min-width: 123px;
+      padding: 12px 10px 7px 0;
+    }
+  }
+}
+
+
+#wpsp_user_welcome{
+  display:none;
+}
+
+#filter_searchby_front{
+  // display:none;
+}
+.ticket_list, .ticket_indivisual, .ticket_assignment, .wait{
+  min-height: auto !important;
+}
+.wpspFilterFront{
+  margin-top:0;
+}
+.support_bs .pager{
+  padding:0;
+  display: flex;
+  display:-webkit-flex;
+  align-items: center;
+  li{
+    margin-right:10px;
+  }
+}
+.support_bs .table > tbody > tr > th {
+  @include breakpoint(mobile){
+    padding: 4px;
+  }
+}
+
+
+// new styles for update 9.0
+.support-plus-container {
+  min-height: 400px;
+  iframe {
+    min-height: 400px;
+  }
+}
+.wpsp_header {
+  background-color: $secondarycolor !important;
+}
+
+.support-dash {
+  // height: 500px;
+  iframe {
+    height: 500px;
+  }
+}
+#wpsp_helpdesk_agent {
+  display: none !important;
+}
+
+.support-dash {
+  max-height: 600px;
+  overflow: scroll;
+}
+.bootstrap-iso {
+    max-width: 100% !important;
+  .navbar {
+    display: none;
+  }
+  .visible-xs.support-ticket-sub-header {
+    display: none !important;
+  }
+  &.override {
+    .navbar {
+      display: block;
+    }
+  }
+  .wpsp_ticket_thread_expander, .thread_actions span {
+    color: #03A9F4 !important;
+  }
+}
+
+
+
+#ticket_list_container {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  > div {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+
+#ticket_filter_container {
+  background: none !important;
+}

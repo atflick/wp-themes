@@ -1,0 +1,24 @@
+.sources {
+    background: $primarycolor;
+    h3 {
+        color: #fff;
+        margin-bottom: .5rem;
+    }
+    p {
+        font-size: .7rem;
+        margin: 0rem;
+        padding: 0rem;
+        line-height: normal;
+        opacity: .8;
+        a {
+          color: #fff;
+        }
+    }
+    .sources-container {
+      columns: 2;
+        margin-left: 1rem;
+        @include breakpoint(mobile){
+            columns: 1;
+        }
+    }
+}

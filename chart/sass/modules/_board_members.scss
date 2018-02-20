@@ -1,0 +1,39 @@
+.board-member-module {
+  h5 {
+    margin-bottom: 2em;
+  }
+  > div {
+    max-width: 1100px;
+    margin: 0 auto;
+
+  }
+}
+
+
+
+.board-member-item {
+  margin-bottom: 1em;
+  width: 33%;
+  @include breakpoint(mobile) {
+    width: 50%;
+    padding: 0 8px;
+  }
+  h4 {
+    padding: 0 20px;
+    font-size: 1.35rem;
+    margin-bottom: 0px;
+    @include breakpoint(mobile) {
+      text-align: center;
+      padding: 0;
+    }
+  }
+  h6 {
+    padding: 0 20px;
+    margin: 0;
+    font-size: 1.25rem;
+    @include breakpoint(mobile) {
+      text-align: center;
+      padding: 0;
+    }
+  }
+}

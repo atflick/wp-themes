@@ -1,0 +1,29 @@
+.view-resources {
+    width: 100%;
+    background: #F2B892;
+    .view-resources-container {
+        width: 40%;
+        .icon {
+            width: 135px;
+            margin: 0 auto;
+            @include breakpoint(mobile){
+                width: 75px;
+            }
+        }
+        @include breakpoint(tablet){
+            width: 60%;
+        }
+        @include breakpoint(mobile){
+            width: 100%;
+            padding: 1rem;
+        }
+        h1 {
+            border-bottom: 5px solid $primarycolor;
+            padding: 1rem 0rem;
+            text-align: center;
+        }
+        h1,p {
+            color: $primarycolor;
+        }
+    }
+}

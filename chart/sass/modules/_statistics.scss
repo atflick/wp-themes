@@ -1,0 +1,72 @@
+.statistics-module{
+		padding: 8rem 0;
+    position: relative;
+    display:flex;
+    display:-webkit-flex;
+    align-items:center;
+		box-shadow: inset 0px 20px 35px -10px #ddd;
+		@include breakpoint(tablet){
+			padding:3rem 0;
+		}
+		@include breakpoint(mobile){
+			padding:3rem 0;
+		}
+		h2{
+			position:relative;
+			z-index:1;
+		}
+}
+.statistics-number{
+		color:$lighterprimary;
+		font-size: 21rem;
+    font-weight: 700;
+    position: absolute;
+    z-index: 0;
+		top:0;
+		left:20%;
+		line-height: 130%;
+		@include breakpoint(tablet){
+			font-size:18rem;
+			text-align: center;
+			position:static;
+			line-height:18rem;
+		}
+		@include breakpoint(mobile){
+			font-size:8rem;
+			text-align: center;
+			position:static;
+			line-height:8rem;
+		}
+		&.long-text {
+			max-width: 1200px;
+			font-size: 10rem;
+			@include breakpoint(tablet){
+				font-size: 8rem;
+				line-height:8rem;
+			}
+			@include breakpoint(mobile){
+				font-size: 6rem;
+				line-height: 6rem;
+			}
+			@include breakpoint(verylarge){
+				font-size: 12rem;
+				line-height: 12rem;
+			}
+		}
+}
+.module .two-thirds{
+	width: 66%;
+	margin-left: 34%;
+	text-align: left;
+	padding: 3rem 0;
+	@include breakpoint(tablet){
+		margin:0 5%;
+		text-align: center;
+		width:90%;
+	}
+	@include breakpoint(mobile){
+		margin:0 5%;
+		text-align: center;
+		width:90%;
+	}
+}

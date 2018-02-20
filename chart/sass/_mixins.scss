@@ -1,0 +1,162 @@
+@mixin breakpoint($point) {
+	@if $point == verylarge {
+		@media only screen and (min-width : 1500px) { @content; }
+	}
+	@if $point == tablet {
+		@media only screen and (max-width : 1100px) { @content; }
+	}
+	@if $point == mobile {
+		@media only screen and (max-width : 720px) { @content; }
+	}
+	@if $point == small-mobile {
+		@media only screen and (max-width : 400px) { @content; }
+	}
+}
+
+@mixin calc($property, $expression) {
+	#{$property}: -moz-calc(#{$expression});
+	#{$property}: -webkit-calc(#{$expression});
+	#{$property}: calc(#{$expression});
+}
+
+@mixin grad($top,$bottom) {
+    background: $bottom; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient($top, $bottom); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient($top, $bottom); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient($top, $bottom); /* For Firefox 3.6 to 15 */
+    background: linear-gradient($top, $bottom); /* Standard syntax */
+}
+
+@mixin grad_left($leftcolor,$rightcolor) {
+	background: $rightcolor; /* For browsers that do not support gradients */
+  	background: -webkit-linear-gradient(left,$leftcolor,$rightcolor,$leftcolor);
+  	background: -o-linear-gradient(left,$leftcolor,$rightcolor,$leftcolor);
+  	background: -moz-linear-gradient(left,$leftcolor,$rightcolor,$leftcolor);
+  	background: linear-gradient(to right, $leftcolor,$rightcolor,$leftcolor);
+}
+
+@mixin transition($transition) {
+    -moz-transition:    $transition;
+    -o-transition:      $transition;
+    -webkit-transition: $transition;
+    transition:         $transition;
+}
+
+@mixin transform($transform) {
+	-webkit-transform: $transform;  /* Saf3.1+, Chrome */
+	     -moz-transform: $transform;  /* FF3.5+ */
+	      -ms-transform: $transform;  /* IE9 */
+	       -o-transform: $transform;  /* Opera 10.5+ */
+	          transform: $transform;
+}
+
+@mixin column($count,$gap) {
+	-webkit-column-count: $count; /* Chrome, Safari, Opera */
+	-moz-column-count: $count; /* Firefox */
+	column-count: $count;
+	-moz-column-gap: $gap;
+	-webkit-column-gap: $gap;
+}
+@mixin avoid() {
+	-webkit-column-break-inside:avoid;
+	-moz-column-break-inside:avoid;
+	-o-column-break-inside:avoid;
+	-ms-column-break-inside:avoid;
+	-ms-page-break-inside: avoid;
+	page-break-inside: auto;
+	page-break-after: always;
+	page-break-before: always;
+	page-break-inside: avoid;
+}
+@mixin primaryfont(){
+	font-family: $primaryfont;
+	font-style: normal;
+	font-weight: 400;
+}
+
+@mixin headersfont(){
+	font-family: $headersfont;
+	font-style: normal;
+	font-weight: 900;
+}
+
+@mixin justify-content($var){
+		@if $var == start {
+			justify-content: flex-start;
+			-webkit-justify-content: flex-start;
+		}
+		@if $var == end {
+			justify-content: flex-end;
+			-webkit-justify-content: flex-end;
+		}
+		@if $var == between {
+			justify-content: space-between; -webkit-justify-content: space-between;;
+			-webkit-justify-content: space-between; -webkit-justify-content: space-between;;
+		}
+		@if $var == around {
+			justify-content: space-around;
+			-webkit-justify-content: space-around;
+		}
+		@if $var == center {
+			justify-content: center;
+			-webkit-justify-content: center;
+		}
+}
+
+@mixin align-items($var){
+		@if $var == start {
+			align-items: flex-start;
+			-webkit-align-items: flex-start;
+		}
+		@if $var == end {
+			align-items: flex-end;
+			-webkit-align-items: flex-end;
+		}
+		@if $var == between {
+			align-items: space-between;
+			-webkit-align-items: space-between;
+		}
+		@if $var == center {
+			align-items: center;
+			-webkit-align-items: center;
+		}
+}
+
+@mixin flex-direction($var){
+	@if $var == column {
+		flex-direction: column;
+		-webkit-flex-direction: column;
+	}
+}
+
+@mixin animation($animate...) {
+    $max: length($animate);
+    $animations: '';
+
+    @for $i from 1 through $max {
+        $animations: #{$animations + nth($animate, $i)};
+
+        @if $i < $max {
+            $animations: #{$animations + ", "};
+        }
+    }
+    -webkit-animation: $animations;
+    -moz-animation:    $animations;
+    -o-animation:      $animations;
+    animation:         $animations;
+}
+
+@mixin keyframes($animationName) {
+    @-webkit-keyframes #{$animationName} {
+        @content;
+    }
+    @-moz-keyframes #{$animationName} {
+        @content;
+    }
+    @-o-keyframes #{$animationName} {
+        @content;
+    }
+    @keyframes #{$animationName} {
+        @content;
+    }
+}

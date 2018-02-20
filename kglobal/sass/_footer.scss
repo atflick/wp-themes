@@ -1,0 +1,97 @@
+footer {
+	@include sidepadding(10%, 5%, 4rem, 2rem);
+	@include vertpadding(4rem, 4rem, 2rem, 2rem);
+	background: $darkblue;
+	.logo {
+		border-bottom: 2px rgba(255,255,255,.5) solid;
+		padding: 2rem 0;
+		margin-bottom: 2rem;
+	}
+	* {
+		font-size: 1rem;
+		color: $cream;
+	}
+	.info {
+
+		p {
+			padding: 0;
+			margin-bottom: .8rem;
+		}
+		@include breakpoint(mobile) {
+			width: 50% !important;
+			order: 2;
+		}
+	}
+
+	.nav {
+		@include breakpoint(mobile) {
+			width: 50% !important;
+			margin-bottom: 1.5rem;
+		}
+		.menu-primary-nav-container > ul {
+			display: flex;
+			flex-direction: column;
+			flex-wrap: wrap;
+			@include breakpoint(tablet) {
+			}
+			@include breakpoint(mobile) {
+				order: 1;
+			}
+			> li {
+
+				// height: 35px;
+
+			}
+		}
+		a {
+			font-weight: normal;
+			color: $cream;
+			margin-bottom: .8rem;
+			display: inline-block;
+		}
+
+		.menu-item-has-children {
+			height: auto;
+			a {
+
+			}
+			.sub-menu {
+				li {
+					&:before {
+						content: "—";
+						margin-right: .2rem;
+						color: #fff;
+						opacity: .5;
+					}
+				}
+			}
+		}
+	}
+
+	.social {
+		justify-content: flex-end;
+		a {
+			margin-left: 1rem;
+			img {
+				height: 23px;
+				&.twitter-icon {
+					height: 20px;
+					margin-top: 2px;
+				}
+			}
+		}
+		@include breakpoint(mobile) {
+			width: 50% !important;
+			order: 3;
+			justify-content: flex-start;
+		}
+	}
+	.copyright {
+		padding-top: 5rem;
+		text-align: center;
+		@include breakpoint (mobile) {
+			padding-top: 2rem;
+			order: 4;
+		}
+	}
+}

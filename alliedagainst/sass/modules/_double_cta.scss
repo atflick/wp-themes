@@ -1,0 +1,75 @@
+.double-cta {
+  .cta-box {
+    padding: 4rem;
+    @include breakpoint(mobile) {
+      padding: 2rem 1rem;
+    }
+    > div {
+      max-width: 400px;
+      margin: 0 auto;
+      padding-top: 1rem;
+    }
+    h2 {
+      padding-bottom: 1rem;
+      text-align: center;
+    }
+    p {
+      text-align: center;
+      padding-bottom: 0;
+      a {
+        font-family: $headersfont;
+        text-decoration: underline;
+      }
+    }
+    &.box-1 {
+      background: $lightsecondary;
+      > div {
+        border-top: 5px solid $primarycolor;
+      }
+      h2 {
+
+        color: $primarycolor;
+
+      }
+      p, a {
+        color: $primarycolor;
+      }
+      .button {
+        background: $tertiarycolor;
+      }
+    }
+    &.box-2 {
+      background: $secondarycolor;
+      > div {
+        border-top: 5px solid $tertiarycolor;
+      }
+      h2 {
+        color: $tertiarycolor;
+      }
+      p, a {
+        color: $tertiarycolor;
+      }
+      .button {
+        background: #fff;
+      }
+    }
+    .button-container {
+      width: 100% !important;
+    }
+    .button {
+      margin-top: 1rem;
+      width: 95%;
+      text-align: center;
+      color: $secondarycolor !important;
+    }
+    i {
+      position: relative;
+      .cta-icon {
+        position: absolute;
+        left: .7rem;
+        top: -.2rem;
+        height: 20px;
+      }
+    }
+  }
+}

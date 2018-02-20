@@ -1,0 +1,154 @@
+
+.ui-tabs{
+  border:none;
+  background:none;
+  .ui-tabs-panel{
+    padding:0;
+  }
+  .tabs-buttons{
+    text-align:center;
+    margin-bottom:2rem;
+  }
+  ul.ui-tabs-nav{
+    background: none !important;
+    border: none !important;
+    display:inline-block;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    li{
+      background:none !important;
+      border:none !important;
+      a{
+        padding: .5em 1em;
+        color:$primarycolor;
+        outline:none !important;
+      }
+      &.ui-state-active{
+        a{
+          background:#fff !important;
+          border-radius:2rem;
+          box-shadow: 1px 2px 5px #ccc;
+        }
+      }
+    }
+  }
+}
+.tabs-module.text_tabs{
+  .tab-container{
+    position: relative;
+    padding:3rem 6rem 4rem;
+    box-shadow: rgb(204, 204, 204) 0px 0px 10px;
+    margin-top: 12rem;
+    @include breakpoint(tablet){
+      padding:4rem 2rem 2rem;
+      margin-top:6rem;
+    }
+    @include breakpoint(mobile){
+      padding:2rem;
+      margin-top:5rem;
+    }
+  }
+  .tabs-buttons{
+    margin-bottom:0;
+  }
+  ul.ui-tabs-nav{
+
+    // width: calc(100% - 12rem);
+    top: -6rem;
+    // left:6rem ;
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    @include breakpoint(tablet){
+      height: 0;
+      top:-3rem;
+
+    }
+    @include breakpoint(mobile){
+      width:100%;
+      left:0;
+      top:-2rem;
+    }
+
+
+    li{
+      width: 49%;
+      text-align: center;
+      padding: 0;
+      margin: 0;
+      @include breakpoint(tablet) {
+        width: calc(50% - .5rem);
+      }
+      &:focus{
+        outline:none;
+      }
+      a{
+        background:#eee;
+        width:100%;
+        padding: 6rem 2rem;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        border-radius: 7px;
+        white-space: normal;
+        width: 100%;
+        display: inline-block;
+        &:hover {
+          opacity: 1;
+        }
+        @include breakpoint(tablet){
+          padding:2rem;
+          font-size:1rem;
+        }
+        @include breakpoint(mobile){
+          font-size:.8rem;
+          padding:1.5rem;
+        }
+      }
+      &.ui-state-active{
+        a{
+          background:$primarycolor !important;
+          color: #fff;
+          padding: 7rem 2rem;
+
+          box-shadow: 0 0 14px #777;
+          position: relative;
+          z-index: 2;
+          @include breakpoint(tablet){
+            padding:2rem;
+            margin-top:0;
+          }
+          @include breakpoint(mobile){
+            padding:1.5rem;
+          }
+          &:after {
+              content: "";
+              display: block;
+              width: 0;
+              height: 0;
+              color:$primarycolor;
+              border-left: 15px solid transparent;
+              border-right: 15px solid transparent;
+              border-top: 15px solid;
+              bottom: -15px;
+              position: absolute;
+              left: calc(50% - 15px);
+          }
+        }
+      }
+    }
+  }
+  .tab-item{
+    padding-top: 2rem;
+  }
+}
+
+
+.ui-widget.ui-widget-content{
+  border:none;
+  font-family:$primaryfont;
+}

@@ -1,0 +1,124 @@
+.team-member {
+  .hero {
+    background: $blue;
+    padding-top: 8rem;
+    padding-bottom: 6rem;
+    z-index: 1;
+    height: auto;
+    @include sidepadding(5%, 10%, 2rem, 2rem);
+    &:after {
+      display: none;
+    }
+    h1 {
+      padding-left: 0;
+      border: none;
+      margin-bottom: 0;
+      animation: none;
+    }
+    h2 {
+      // margin-bottom: 2rem;
+      text-align: left;
+    }
+    h5 {
+      font-size: 1.5rem;
+      color: $cream;
+      padding: .2rem 0;
+      &.title {
+        padding: 1.5rem 0;
+        font-weight: bold;
+      }
+      &.email {
+        a {
+          &:hover {
+            opacity: 1;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+    a {
+      color: $cream
+    }
+    .headshot {
+      text-align: center;
+      img {
+        width: 80%;
+        max-width: 380px;
+        margin: 0 auto;
+        @include breakpoint(smallmobile) {
+          margin-bottom: 3rem;
+        }
+      }
+    }
+    .info {
+      a img {
+        height: 22px;
+        margin-top: 1.5rem;
+        margin-right: 1.2rem;
+      }
+
+
+    }
+  }
+  .about {
+    padding-top: 2rem;
+    @include sidepadding(10%, 15%, 4rem, 2rem);
+    h2 {
+      color: $darkblue;
+      text-align: left;
+      margin-bottom: 3rem;
+    }
+    p {
+      @include sidepadding(10%, 13%, 6rem, 2rem);
+    }
+    margin-bottom: 5rem;
+    @include breakpoint(mobile) {
+      margin-bottom: 3rem;
+    }
+  }
+}
+
+.latest-posts, .latest-blogs {
+  position: relative;
+  padding-bottom: 3rem;
+  @include sidepadding(10%, 15%, 4rem, 2rem);
+  .logo-bg {
+    position: relative;
+    &:before {
+      background: url('../images/kglobal-svg_bg.svg') no-repeat;
+      background-size: contain;
+      content: '';
+      width: 80px;
+      height: 80px;
+      left: -55px;
+      top: 50%;
+      position: absolute;
+      z-index: 1;
+      @include breakpoint(mobile) {
+        display: none;
+      }
+    }
+  }
+  h2 {
+    text-align: left;
+    color: $darkblue;
+    margin-bottom: 3rem;
+  }
+  &.cream-offset-bg {
+    position: relative;
+    overflow: hidden;
+    &:after {
+      width: 100%;
+      height: 100%;
+      content: '';
+      background: $cream;
+      top: 12rem;
+      left:0;
+      position: absolute;
+      z-index: -1;
+    }
+  }
+  .button-container {
+    margin-top: 2.5rem;
+  }
+}

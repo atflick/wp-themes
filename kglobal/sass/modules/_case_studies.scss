@@ -1,0 +1,86 @@
+.case-studies {
+  position: relative;
+  .module-title {
+    padding: 6rem 0;
+    h2 {
+      text-align: center;
+      color: $darkblue;
+    }
+    @include breakpoint(mobile) {
+      padding:5rem 0 6rem;
+    }
+  }
+  .case-study-container {
+    background: $cream;
+    position: relative;
+    padding-bottom: 4rem;
+    @include sidepadding(10%, 5%, 4rem, 2rem);
+    .case-study-row {
+      position: relative;
+      top: -50px;
+      .kglobal-logo-accent {
+        position: absolute;
+        right: 5%;
+        bottom: -150px;
+        z-index: 1;
+        img {
+          width: 59px;
+        }
+        @include breakpoint(mobile) {
+          display: none;
+        }
+      }
+    }
+    .case-study {
+      width: 32%;
+
+      @include breakpoint(mobile) {
+        width: 100%;
+        margin-bottom: 1.5rem;
+      }
+      .case-study-image {
+        width: 100%;
+        > div {
+          padding-top: 70%;
+          @include breakpoint(mobile) {
+            padding-top: 50%;
+          }
+          @include breakpoint(smallmobile) {
+            padding-top: 50%;
+          }
+        }
+      }
+      .case-study-details {
+        padding: 2rem 1rem;
+        flex-grow: 2;
+        background: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        h5 {
+          text-align: center;
+        }
+      }
+      .inner {
+        transition: .3s ease all;
+        box-shadow: 0px 0px 0px rgba(0,0,0,.3);
+      }
+      &:hover {
+        .inner {
+          box-shadow: 0px 0px 25px rgba(0,0,0,.3);
+        }
+      }
+    }
+  }
+  .button-container {
+    position: relative;
+    z-index: 2;
+    margin-top: 2rem;
+    @include breakpoint(tablet) {
+      width: 50%;
+    }
+    @include breakpoint(mobile) {
+      width: 100%;
+    }
+  }
+}

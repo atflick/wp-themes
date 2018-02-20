@@ -1,0 +1,19 @@
+.testimonial{
+  .flex-col{
+    background:$secondarycolor;
+    color:#fff;
+    width:100%;
+    p{
+      color:#fff;
+    }
+    h2{
+      color:#fff;
+      text-align: left;
+      max-width: none;
+      padding:0;
+    }
+    h4{
+      color:#fff;
+    }
+  }
+}

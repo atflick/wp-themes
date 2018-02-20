@@ -1,0 +1,117 @@
+h1,h2,h3,h4,h5{
+	@include primaryfont();
+	line-height:120%;
+	@include transition(all 0.3s ease);
+
+	&.lightprimary{
+		color:$lightprimary;
+	}
+
+	&.darkprimary{
+		color:$primarycolor;
+	}
+}
+
+h1{
+	font-size:4rem;
+	line-height: 4.3rem;
+	font-weight: 700;
+	@include headersfont();
+	color: $cream;
+	margin-bottom:1rem;
+
+	@include breakpoint(mobile){
+		font-size:3rem;
+		line-height: 3.8rem;
+	}
+}
+h2{
+	color: $cream;
+	font-weight: 600;
+	font-size: 3rem;
+	line-height: 3.4rem;
+	@include headersfont();
+
+  @include breakpoint(mobile){
+		font-size:2.5rem;
+		line-height: 2.9rem;
+		text-align: center;
+	}
+}
+h3{
+	@include headersfont();
+	font-size:2.3rem;
+	line-height: 3rem;
+	@include breakpoint(mobile) {
+		font-size: 2rem;
+	}
+}
+h4{
+	font-size:1.8rem;
+	@include primaryfont();
+	text-transform: uppercase;
+}
+h5{
+	@include headersfont();
+	font-size:1.8rem;
+	color: $darkblue;
+}
+
+h6{
+	text-transform: uppercase;
+    font-size: .9rem;
+    color: #aaa;
+    font-weight: 500;
+    margin: .3rem 0;
+}
+
+label{
+	color:$primarycolor;
+	font-weight:bold;
+}
+
+p{
+	color: $darkblue;
+    @include primaryfont();
+    font-size: 1rem;
+    font-weight: 300;
+    padding:.5rem 0;
+    @include breakpoint(mobile){
+    	// font-size:1rem;
+    }
+	&:empty {
+		display: none;
+	}
+}
+li {
+	font-size: 1rem;
+}
+a{
+	color: $darkblue;
+	text-decoration:none;
+	@include transition(all 0.3s ease);
+	&:hover{
+		opacity:0.9;
+	}
+}
+
+em {
+	font-style: italic;
+}
+strong {
+	font-weight: 600;
+}
+
+.text-shadow {
+	text-shadow: 0 2px 4px rgba(0,0,0,.5);
+}
+.col-2 {
+	column-count: 2;
+}
+// h1 - Hero titles
+
+// h2 - Module titles
+
+// h3 - Post type title
+
+// h4 - Categories/Tags

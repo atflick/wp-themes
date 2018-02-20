@@ -1,0 +1,59 @@
+.work_sectors {
+  padding-top: 3rem;
+  background: $blue;
+  h2 {
+    margin-bottom: 3rem;
+  }
+  p {
+    font-size: 1.4rem;
+    padding: .5rem 0 3rem;
+    @include primaryfont();
+    color: $cream;
+  }
+  a:hover {
+    opacity: 1;
+  }
+  .work-link {
+    width: 50%;
+    @include breakpoint(smallmobile) {
+      width: 100%;
+    }
+    &:hover {
+      opacity: 1;
+      .icon {
+        box-shadow: 0 0 25px rgba(0,0,0,.3);
+        opacity: 1;
+      }
+      p {
+        font-weight: bold;
+      }
+    }
+  }
+  .icon {
+    box-shadow: 0 0 0px rgba(0,0,0,.3);
+    transition: .3s ease all;
+    width: 80%;
+    max-width: 160px;
+    border: 0px solid $cream;
+    border-radius: 50%;
+    background: $cream;
+    margin-bottom: 1.5rem;
+    > div {
+      padding-top: 100%;
+    }
+    @include breakpoint(verylarge) {
+      max-width: 160px;
+    }
+    @include breakpoint(mobile) {
+      width: 60%;
+    }
+  }
+  .work_sectors_icons {
+    p{
+      text-align: center;
+      color: $cream;
+      @include headersfont();
+
+    }
+  }
+}

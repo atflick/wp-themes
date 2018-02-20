@@ -1,0 +1,68 @@
+h4.check-mark{
+    padding-left: 60px;
+    position:relative;
+    @include breakpoint(mobile){
+      padding-left:45px;
+    }
+    &:before{
+      content:"";
+      background:url(../images/icons/checkmark.png) no-repeat;
+      width:40px;
+      height:40px;
+      position:absolute;
+      top:2px;
+      left:0;
+
+      @include breakpoint(mobile){
+        @include transform(scale(.6));
+        top: -9px;
+      }
+
+    }
+}
+
+.column-container{
+  @include column(2,2rem);
+  @include breakpoint(mobile){
+    @include column(1,0);
+  }
+  &.three_columns{
+    @include column(3,0);
+    @include breakpoint(tablet){
+      @include column(2,2rem);
+    }
+    @include breakpoint(mobile){
+      @include column(1,0);
+    }
+  }
+  .grid-item{
+    @include breakpoint(mobile){
+      padding:0;
+    }
+  }
+}
+
+.sponsor{
+  display:flex;
+  display: -webkit-flex;
+  align-items: center;
+  @include breakpoint(mobile){
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+  }
+  .sponsor-logo{
+    margin-right: 2rem;
+    line-height: 0;
+    img{
+      height: 100%;
+      min-height: 60px;
+      width: auto;
+    }
+    @include breakpoint(mobile){
+      margin-bottom:2rem;
+    }
+  }
+  .sponsor-caption{
+    font-size:.9rem;
+  }
+}

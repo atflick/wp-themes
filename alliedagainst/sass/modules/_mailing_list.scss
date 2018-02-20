@@ -1,0 +1,88 @@
+.form-module {
+    position: relative;
+    height: auto;
+	min-height: 80vh;
+  align-items: center;
+  @include breakpoint(mobile) {
+      min-height: 0;
+      height: auto;
+  }
+    &:after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(7,73,107, .5);
+    }
+
+    .form-container {
+        z-index: 99999;
+        max-width: 444px;
+        .wpforms-confirmation-container-full{
+            background: none;
+            border: 3px solid $secondarycolor;
+        }
+        @include breakpoint(tablet){
+            width: 50%;
+        }
+        @include breakpoint(smallmobile){
+            width: 100%;
+        }
+        h2,p{
+            color: #fff;
+        }
+        h2 {
+            border-bottom: 5px solid #fff;
+            padding: 1rem 0rem;
+            text-align: center;
+        }
+
+        form {
+            .wpforms-field-medium {
+                max-width: none !important;
+            }
+            #wpforms-227-field_4-container{
+                &:after {
+                    content: "* denotes required field";
+                    position:absolute;
+                    color: #fff;
+                    padding-top: .3rem;
+                    content: '* denotes required field';
+                    font-style: italic;
+                    font-size: .5rem;
+                    font-family: $regularfont
+                }
+            }
+            input {
+                border-radius: 5px !important;
+            }
+            .wpforms-field-name{
+                width: 100%;
+            }
+            .wpforms-submit {
+                @include primaryfont();
+                border-radius: 30px !important;
+                padding: 1rem 5rem !important;
+                margin-top: 2rem;
+                background: $secondarycolor !important;
+                color: #fff !important;
+                text-transform: uppercase !important;
+                font-size: .9rem !important;
+                font-family: $demifont;
+                border: none !important;
+            }
+        .wpforms-submit-container{
+            display: flex !important;
+            justify-content: center !important;
+            }
+        }
+        @include breakpoint (mobile) {
+          width: 60%;
+        }
+        @include breakpoint (smallmobile) {
+          width: 100%;
+        }
+    }
+}

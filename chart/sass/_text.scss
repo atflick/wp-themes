@@ -1,0 +1,136 @@
+h1,h2,h3,h4,h5{
+	@include primaryfont();
+	line-height:140%;
+	@include transition(all 0.3s ease);
+
+	&.lightprimary{
+		color:$lightprimary;
+	}
+
+	&.darkprimary{
+		color:$primarycolor;
+	}
+}
+
+h1,h1 p{
+	font-size:3.5rem;
+	@include headersfont();
+	margin-bottom:1rem;
+	font-weight:700;
+
+	@include breakpoint(tablet){
+		font-size:2.5rem;
+	}
+	@include breakpoint(mobile){
+		font-size:2rem;
+	}
+	&.hero-title {
+		line-height: 130%;
+	}
+}
+h2{
+	color:$secondarycolor;
+	font-weight:700;
+	font-size: 2.5rem;
+    margin: 0 0 1rem;
+    padding-bottom: 1rem;
+
+		@include breakpoint(tablet){
+			font-size:2rem;
+		}
+    @include breakpoint(mobile){
+			font-size:1.75rem;
+		}
+}
+
+section h2{
+	text-align:center;
+	padding:0 2rem;
+	width:100%;
+}
+h3{
+	font-size:2rem;
+	color:$primarycolor;
+	margin: .75rem 0;
+	@include breakpoint(tablet){
+		font-size:1.75rem;
+	}
+	@include breakpoint(mobile){
+		font-size:1.5rem;
+	}
+}
+h4, h4 p{
+	font-size:1.65rem;
+	@include primaryfont();
+	font-weight:700;
+	margin:.65rem 0;
+	color:$secondarycolor;
+
+	@include breakpoint(tablet){
+		font-size:1.5rem;
+	}
+	@include breakpoint(mobile){
+		font-size:1.25rem;
+	}
+}
+h5{
+	font-size:1.5rem;
+	font-weight:700;
+	margin: .5rem 0;
+	color:$secondarycolor;
+	@include breakpoint(tablet){
+		font-size:1.25rem;
+	}
+	@include breakpoint(mobile){
+		font-size:1.15rem;
+	}
+}
+
+h6{
+    font-size: 1.25rem;
+    color: #bbb;
+    font-weight: 500;
+    margin: .3rem 0;
+		@include breakpoint(tablet){
+			font-size:1rem;
+		}
+		@include breakpoint(mobile){
+			font-size:.9rem;
+		}
+}
+
+label{
+	color:#000;
+	font-weight:bold;
+	font-size:.9rem;
+}
+
+p{
+	color: #000;
+    @include primaryfont();
+    font-size: 1.2rem;
+    font-weight: 300;
+    padding:.5rem 0;
+    @include breakpoint(mobile){
+    	font-size:1rem;
+    }
+}
+
+a{
+	text-decoration:none;
+	color:$primarycolor;
+	@include transition(all 0.3s ease);
+	&:hover{
+		opacity:0.9;
+	}
+}
+
+strong{
+	font-weight:bold;
+}
+em{
+	font-style:italic;
+}
+.center-text {
+	text-align: center;
+}

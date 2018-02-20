@@ -1,0 +1,23 @@
+.highlight-block {
+    background: $tertiarycolor;
+    padding: 5rem 3rem;
+    @include breakpoint(mobile){
+        padding: 1rem;
+    }
+    h1, p {
+        color: $primarycolor;
+    }
+    .highlight-container {
+        border-left: 5px solid $primarycolor;
+        padding-left: 3rem;
+             @include breakpoint(mobile){
+                padding-left: 1rem;
+            }
+    }
+            .orange-button {
+                height: 48px;
+                @include breakpoint(tablet){
+                    height: 42px;
+                }
+            }
+}

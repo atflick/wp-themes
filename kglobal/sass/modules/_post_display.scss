@@ -1,0 +1,89 @@
+.post-display-module {
+  background: #fff;
+  position: relative;
+  z-index: 2;
+  @include sidepadding(15%, 10%, 2rem, 1rem);
+  h2 {
+    color: $darkblue;
+    margin-bottom: 2rem;
+  }
+  p {
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+  }
+  &.cream-offset-bg {
+    position: relative;
+    overflow: hidden;
+    background: rgba(0,0,0,0);
+    &:after {
+      width: 100%;
+      height: 100%;
+      content: '';
+      background: $cream;
+      top: 16rem;
+      left:0;
+      position: absolute;
+      z-index: -1;
+    }
+  }
+  &.team_members {
+    @include sidepadding(7%, 3rem, 2rem, 1rem);
+    @include breakpoint(mobile) {
+      justify-content: center;
+    }
+    .module-title {
+      h2, p {
+        padding-left: 1rem;
+        @include breakpoint(mobile) {
+          padding-left: 0;
+        }
+      }
+    }
+  }
+}
+
+// .logo-background {
+//   &:nth-of-type(18n - 9) {
+//     position: relative;
+//     z-index: 2;
+//     &:after {
+//       content: '';
+//       position: absolute;
+//       background: url('../images/kglobal-svg_bg.svg') no-repeat;
+//       background-size: contain;
+//       content: '';
+//       width: 90px;
+//       height: 90px;
+//       left: -145%;
+//       bottom: -20%;
+//       z-index: 1;
+//       @include breakpoint(mobile) {
+//         display: none;
+//       }
+//
+//     }
+//   }
+//   &:nth-of-type(21n) {
+//     position: relative;
+//     z-index: 2;
+//     &:after {
+//       content: '';
+//       position: absolute;
+//       background: url('../images/kglobal-svg_bg.svg') no-repeat;
+//       background-size: contain;
+//       content: '';
+//       width: 90px;
+//       height: 90px;
+//       right: -15%;
+//       top: 20%;
+//       z-index: 1;
+//       @include breakpoint(mobile) {
+//         display: none;
+//       }
+//
+//     }
+//   }
+//   &:nth-of-type(45n) {
+//     display: none;
+//   }
+// }

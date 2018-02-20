@@ -1,0 +1,51 @@
+.client_list {
+  background: $darkblue;
+  @include sidepadding(15%, 10%, 6rem, 2rem);
+  h2 {
+    color: $cream;
+    margin-bottom: 3rem;
+  }
+  .list-container {
+    column-count: 3;
+    @include breakpoint(mobile) {
+      column-count: 2;
+    }
+    > div {
+      padding: .5rem 0rem;
+      display: inline-block;
+      width: 100%;
+      p {
+        color: $cream;
+        text-align: left;
+        padding: 0rem;
+      }
+      a {
+        color: $cream;
+        font-weight: 600;
+        position: relative;
+        text-align: left;
+        display: inline-block;
+        &:after {
+  				content: "";
+  				position: absolute;
+  				bottom: -2px;
+  				left: 0;
+  				height: 2px;
+  				width: 0%;
+  				background: $secondarycolor;
+  				transition: all .3s ease;
+  			}
+  			&:hover {
+  				opacity: 1;
+  				&:after {
+  					opacity: 1;
+  					width: 100%;
+            @include breakpoint(mobile) {
+              width: 0;
+            }
+  				}
+  			}
+      }
+    }
+  }
+}

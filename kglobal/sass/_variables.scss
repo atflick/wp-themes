@@ -1,0 +1,38 @@
+/*---- Fonts -------*/
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,700');
+$primaryfont: "franklin-gothic-urw",sans-serif;
+$headersfont: 'Playfair Display', serif;
+
+/*---- Color -------*/
+$primarycolor: #000;
+$secondarycolor:#ED8D32;
+$accentorange: #F07241;
+$blue: #2691AF;
+$cream: #F4F0E5;
+$darkblue: #034059;
+$transorange: rgba(237, 140, 49, 0.7);
+
+$lightprimary:#CA79FF;
+$darkprimary:#8C23D1;
+
+$darkgray:#333;
+$kglobalgray: #6D6E72;
+$textgray:#9B9B9B;
+
+
+.white, .white p{
+	color:#fff;
+}
+
+.darkprimary{
+	color:$primarycolor;
+}
+
+.darkprimary-bg{
+	background:$primarycolor;
+	color:#fff;
+}
+
+.lighterblue-bg{
+	background:$lightprimary;
+}

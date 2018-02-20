@@ -1,0 +1,46 @@
+@media print{
+
+	@page {
+	  size: A4;
+	  margin: 6rem 2rem;
+	}
+
+	p,h1,h2,h3,h4,h5,h6,li{
+		color:#000 !important;
+	}
+
+	h1, h2{
+		font-size:2rem !important;
+	}
+	.flex-container {
+		flex-direction: column;
+		> div {
+			width: 100%;
+		}
+	}
+	header, footer {
+		display: none !important;
+	}
+	section {
+		padding: 0 !important;
+
+	}
+	.flex-col, .flex-3-4 {
+		width: 100% !important;
+	}
+	.hero, .flex-container {
+		padding: 0 !important;
+		height: auto !important;
+		min-height: 0 !important;
+		.inner-hero {
+			padding: 0 !important;
+		}
+		&:before {
+			display: none !important;
+		}
+	}
+	.social {
+		display: flex;
+		flex-direction: row !important;
+	}
+}

@@ -1,0 +1,202 @@
+.image-content {
+  padding: 7rem 3rem;
+  @include breakpoint(mobile) {
+    padding: 3rem 2rem;
+  }
+  &.dark_blue {
+    background: $primarycolor;
+    * {
+      color: $tertiarycolor;
+    }
+    .inner {
+      border-left: 5px solid $tertiarycolor;
+    }
+  }
+  &.orange {
+    background: $secondarycolor;
+    * {
+      color: $tertiarycolor;
+    }
+    .inner {
+      border-left: 5px solid $tertiarycolor;
+    }
+  }
+  &.light_blue {
+    background: $lightgreen;
+    * {
+      color: $primarycolor;
+    }
+    .inner {
+      border-left: 5px solid $primarycolor;
+    }
+  }
+  &.light_orange {
+    background: $lightsecondary;
+    * {
+      color: $primarycolor;
+    }
+    .inner {
+      border-left: 5px solid $primarycolor;
+    }
+  }
+  &.cream {
+    background: $tertiarycolor;
+    * {
+      color: $primarycolor;
+    }
+    .inner {
+      border-left: 5px solid $primarycolor;
+    }
+  }
+
+  .content {
+    padding-left: 0rem;
+    @include breakpoint(tablet){
+      order: 2;
+    }
+    &.right  {
+      padding-left: 1rem;
+      order: 2;
+      @include breakpoint(tablet) {
+        padding-left: 0;
+      }
+    }
+    &.left  {
+      padding-right: 1rem;
+      @include breakpoint(tablet) {
+        padding-right: 0;
+      }
+    }
+    &.photo {
+      width: 50%;
+      @include breakpoint(tablet) {
+        width: 100%;
+      }
+    }
+    &.icon {
+      width: 55%;
+      @include breakpoint(tablet) {
+        width: 100%;
+      }
+    }
+    .inner {
+      padding-left: 2.5rem;
+    }
+    h2 {
+      margin-bottom: 2rem;
+    }
+    ul {
+      margin: 1rem 0rem 1rem 1.5rem;
+
+      li {
+        list-style-type: disc;
+        margin: 1.5rem 0rem;
+        font-size: 1.3rem;
+        line-height: 1.9rem;
+
+        @include breakpoint(mobile){
+          font-size:1.2rem;
+          line-height: 1.8rem;
+        }
+      }
+    }
+
+  }
+
+  .image {
+    display: flex;
+    align-items: center;
+    @include breakpoint(tablet){
+      order: 1;
+    }
+    &.left.photo {
+      padding: 0 0rem 0 3rem;
+      @include breakpoint(tablet) {
+        padding: 3rem;
+        padding-top: 0;
+      }
+      @include breakpoint(mobile) {
+        padding: 3rem 0;
+        padding-top: 0;
+      }
+    }
+    &.right.photo {
+      padding: 0 3rem 0 0rem;
+      order: 1;
+      @include breakpoint(tablet) {
+        padding: 3rem;
+        padding-top: 0;
+      }
+      @include breakpoint(mobile) {
+        padding: 3rem 0;
+        padding-top: 0;
+      }
+    }
+    &.photo {
+      width: 50%;
+      > div {
+        padding-top: 55%;
+        min-height: 400px;
+      }
+      @include breakpoint(tablet) {
+
+        width: 100%;
+        > div {
+          padding-top: 40%;
+          min-height: 0;
+        }
+      }
+      @include breakpoint(mobile) {
+        > div {
+          padding-top: 50%;
+        }
+      }
+      @include breakpoint(smallmobile) {
+        > div {
+          padding-top:65%;
+        }
+      }
+    }
+    &.icon {
+      width: 45%;
+      @include breakpoint(tablet) {
+        width: 100%;
+        padding-top: 3rem;
+      }
+      img {
+        width: 40%;
+        max-width: 300px;
+      }
+    }
+    > div {
+      // height: 100%;
+      // max-height: 400px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @include breakpoint(tablet) {
+        max-height: 350px;
+      }
+    }
+  }
+  .button-container a {
+    color: $tertiarycolor;
+  }
+    .no-filter {
+      background-position: center; 
+      background-repeat: no-repeat; 
+      background-size: contain;
+    }
+    .bg-filter {
+      background-color: rgba(4, 73, 107,1); 
+      background-blend-mode: hard-light; 
+      background-position: center; 
+      background-repeat: no-repeat; 
+      background-size: cover;
+    }
+
+  #svg-filter {
+    display: none;
+  }
+}

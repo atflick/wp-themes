@@ -1,0 +1,79 @@
+.quotes-container {
+  position: relative;
+  padding-top: 5rem;
+  h5 {
+    text-align: center;
+    margin-top: 3rem;
+    font-size: 1.125rem;
+    font-weight: bold;
+  }
+  h2, h5, p, h6 {
+    color: $darkblue;
+  }
+  h2 {
+    margin-bottom: 3rem;
+  }
+  h6 {
+    font-size: 1rem;
+    text-align: center;
+    text-transform: none;
+    font-style: italic;
+  }
+
+  .quotes {
+    .slick-dots {
+      margin-top: 1rem;
+      position: relative !important;
+      bottom: 0rem !important;
+      li {
+        border: 1px solid $secondarycolor;
+        border-radius: 50%;
+        button {
+          &:before {
+            content: none;
+          }
+        }
+        &.slick-active {
+          background: $secondarycolor;
+        }
+      }
+    }
+    .quote-single {
+      padding: 0 4rem;
+      @include breakpoint(mobile) {
+        padding: 0 0rem;
+      }
+      p {
+        font-size: 1.125rem;
+        text-align: center;
+        &.company {
+          font-size: 1rem;
+        }
+      }
+      &:focus, &:active {
+        outline: 0;
+      }
+    }
+  }
+  .quote-bubble {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: url('../images/bg-quotations2.jpg') center no-repeat;
+    background-size: 75%;
+    img {
+      height: 70%;
+      margin-top: 10%;
+    }
+  }
+}
+
+.image-slider {
+  .images {
+    .image {
+      padding: 10rem;
+    }
+  }
+}

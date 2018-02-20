@@ -1,0 +1,56 @@
+/*---- Fonts -------*/
+$primaryfont: "soleil",sans-serif;;
+$headersfont: "soleil",sans-serif;;
+
+/*---- Color -------*/
+$primarycolor:#068B84;
+$secondarycolor:#2B2E49;
+
+$lightprimary:#07A99F;
+$lighterprimary:rgba(6,139,132,0.5);
+$darkprimary:#04726B;
+
+$lightsecondary: #373A5B;
+
+$darkgray:#333;
+$lightgray:#EEF2F6;
+
+$textgray:#9B9B9B;
+
+$blue:#03A9F4;
+
+.lightblue, .lightblue p{
+	color:rgba(255,255,255,0.85);
+}
+.light-green{
+	color:$primarycolor;
+	opacity:.5;
+}
+.white, .white p{
+	color:#fff;
+}
+hr.white{
+	background:rgba(255,255,255,.8);
+}
+
+.orange{
+	color:$secondarycolor;
+}
+
+.darkprimary{
+	color:$primarycolor;
+}
+
+.darkprimary-bg{
+	background:$primarycolor;
+	color:#fff;
+}
+.gray-bg{
+	background:#fafafa;
+}
+.dark-gray-bg {
+	background: #f4f4f4;
+}
+.lighterblue-bg{
+	background:$lightprimary;
+}

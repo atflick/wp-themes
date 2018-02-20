@@ -1,0 +1,121 @@
+#search-results {
+  background: #fff;
+  p {
+    color: $primarycolor;
+  }
+  .news-card {
+    background: #fff;
+    &:hover {
+      box-shadow: none;
+    }
+    & > div:first-of-type > div {
+      border-left: none;
+      padding-left: 0px;
+    }
+    .info {
+      width: 70%;
+      @include breakpoint(mobile) {
+        width: 100%;
+      }
+      h6 {
+        padding-left: 0rem;
+      }
+    }
+    .flex-container {
+      width: 30%;
+      @include breakpoint(mobile) {
+        width: 100%;
+      }
+    }
+  }
+  .select-holder {
+    width: 250px;
+    padding: 2rem;
+    position: relative;
+    &:after {
+      content: "";
+      position: absolute;
+      width: 13px;
+      height: 10px;
+      background: url(../images/caret-down.svg) no-repeat center center;
+      background-size: cover;
+      font-size: 0;
+      right: 45px;
+      top: 50%;
+      @include transform(translateY(-50%));
+      line-height: 0;
+    }
+    select {
+      -webkit-appearance: none;
+      outline: none;
+      background: $primarycolor;
+      color: $tertiarycolor;
+      width: 100%;
+      border-style: none;
+      padding: 1rem;
+      border-radius: 0px;
+    }
+  }
+  .pagination {
+    justify-content: space-around;
+    align-items: center;
+    @include breakpoint(mobile){
+      margin-top: 2rem;
+    }
+    @include breakpoint(smallmobile) {
+      .flex-30 {
+        width: 50%;
+        order: 2
+      }
+      .page-num {
+        width: 100%;
+        order: 1;
+      }
+      // flex-wrap: nowrap;
+    }
+    p, a {
+      color: $primarycolor;
+      font-family: $headersfont;
+      font-size: 1.2rem;
+    }
+
+    .next a:after {
+      right: -17px;
+    }
+    .prev a:after {
+      @include transform(scaleX(-1) translateY(-50%));
+      left: -17px;
+    }
+    a{
+      text-transform: capitalize;
+      border-radius: 0px;
+      background: transparent;
+      color: $primarycolor;
+      position: relative;
+      padding: .5rem;
+      font-size: .8rem;
+      &:after {
+        content: '';
+        width: 12px;
+        height: 16px;
+        top: 50%;
+        @include transform(translateY(-50%));
+        position: absolute;
+        background-size:cover;
+        background: url(../images/caret.svg) no-repeat center center;
+      }
+    }
+  }
+}
+
+.four-oh-four {
+  background: $lightergreen;
+  width: 100%;
+  p, h3 {
+    color: $primarycolor;
+  }
+  a {
+    font-family: $headersfont;
+    border-bottom: 3px solid $secondarycolor;
+  }
+}

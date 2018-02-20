@@ -1,0 +1,103 @@
+.form-module, .subscribe-form, .application-form {
+  @include sidepadding(5%, 0, 2rem, 1rem);
+  justify-content: center;
+  > div {
+    position: relative;
+  }
+  h2 {
+    font-size: 4rem;
+    line-height: 4.3rem;
+    font-weight: normal;
+    &:before {
+      background: url('../images/kglobal-svg_bg.svg') no-repeat;
+      background-size: contain;
+      content: '';
+      width: 80px;
+      height: 80px;
+      left: -55px;
+      position: absolute;
+      z-index: -1;
+      @include breakpoint(mobile) {
+        display: none;
+      }
+    }
+  }
+  h3, h2 {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    max-width: 900px;
+    color: $darkblue;
+  }
+  form {
+    max-width: 500px !important;
+    margin: 0 auto !important;
+  }
+  label {
+    // display: none !important;
+    color: $darkblue !important;
+  }
+  .wpforms-required-label {
+    color: $secondarycolor !important;
+  }
+  .wpforms-field-container {
+    max-width: 600px !important;
+  }
+  .wpforms-field-medium {
+    max-width: 100% !important;
+  }
+  .wpforms-one-half {
+    width: 54% !important;
+    @include breakpoint(smallmobile) {
+      width: 100% !important;
+      margin-left: 0 !important;
+    }
+  }
+  .wpforms-first {
+    width: 42% !important;
+    @include breakpoint(smallmobile) {
+      width: 100% !important;
+
+      margin-bottom: 20px !important;
+    }
+  }
+  .wpforms-submit-container {
+    padding-top: 0 !important;
+  }
+  .wpforms-container-full {
+    margin-bottom: 0 !important;
+  }
+  input[type=file],  #wpforms-342-field_7 {
+    display: none !important;
+    opacity: 0 !important;
+  }
+  input[type=file]::-webkit-file-upload-button {
+    display: none !important;
+  }
+}
+
+.fake-button {
+  content: 'Choose File' !important;
+  background: $secondarycolor !important;
+  color: #fff !important;
+	font-size: .875rem !important;
+	font-weight: 600 !important;
+	padding: .7rem 2rem !important;
+	border-radius: 5px !important;
+	margin: 1rem 0rem !important;
+	border: 1px solid transparent !important;
+	text-transform: uppercase !important;
+	text-align: center !important;
+	letter-spacing: 2px !important;
+  width: 200px !important;
+  color: #fff !important;
+  transition: all .3s ease;
+  &.selected {
+    background: $darkblue !important;
+    content: 'File Chosen' !important;
+  }
+  &:hover {
+    cursor: pointer;
+    opacity: 1;
+    background: $accentorange !important;
+  }
+}

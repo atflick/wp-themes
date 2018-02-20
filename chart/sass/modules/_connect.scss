@@ -1,0 +1,125 @@
+section.connect-module{
+  overflow: visible;
+  .form-header{
+    margin-bottom:2rem;
+    @include breakpoint(mobile){
+      margin-bottom: 0;
+    }
+  }
+  h2{
+    text-align: left;
+    margin:0;
+    padding:0;
+    line-height:115%;
+  }
+  .form-desc{
+    font-size:1rem;
+  }
+  .flex-container{
+    justify-content: space-between; -webkit-justify-content: space-between;;
+  }
+  .flex-col{
+    width:46%;
+    @include breakpoint(mobile){
+      width:100%;
+      margin-bottom:1rem;
+    }
+  }
+  .container{
+    box-shadow: 0px 5px 23px #ccc;
+    position: relative;
+    background: #fafafa;
+    padding: 4rem 6rem;
+    border-radius: 10px;
+    margin-bottom:-75px;
+    @include breakpoint(tablet){
+      padding:4rem 2rem;
+    }
+    @include breakpoint(mobile){
+      padding:2rem;
+    }
+
+    &:after,&:before{
+      content: "";
+      width: 100%;
+
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
+
+    &:before{
+      height: 70px;
+      box-shadow: 0px 10px 12px 10px rgba(25,27,44,1);
+      z-index: 1;
+
+    }
+    &:after {
+      background: #fafafa;
+      height: 90px;
+      z-index: 2;
+
+    }
+
+  }
+
+  div.wpforms-container-full .wpforms-form{
+    .wpforms-field-container{
+      display: flex;
+    	display: -webkit-flex;
+    	flex-wrap: wrap;
+      -webkit-flex-wrap: wrap;
+      justify-content: space-between; -webkit-justify-content: space-between;;
+      div.wpforms-field{
+        width:46%;
+        margin:.5rem 0;
+        @include breakpoint(mobile){
+          width:100%;
+          margin:0;
+        }
+        &.subscribe-checkbox{
+          width:70%;
+          margin-top:2rem;
+          @include breakpoint(tablet){
+            width:60%;
+          }
+          @include breakpoint(mobile){
+            width:100%;
+            margin-top:0;
+          }
+        }
+        input[type="text"],input[type="email"],select{
+          width:100%;
+          max-width:100%;
+        }
+        .wpforms-field-description{
+          font-style:italic;
+          margin-left:30px;
+          @include breakpoint(tablet) {
+            margin-left: 0;
+          }
+        }
+      }
+    }
+    .wpforms-submit-container{
+      position:absolute;
+      right: 6rem;
+      bottom: 6rem;
+      z-index: 5;
+      @include breakpoint(tablet){
+        right:2rem;
+        bottom:8rem;
+      }
+      @include breakpoint(mobile){
+        width:100%;
+        text-align: left;
+        position: relative;
+        bottom:0;
+        left:0;
+
+      }
+    }
+  }
+}

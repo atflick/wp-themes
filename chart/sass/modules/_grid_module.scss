@@ -1,0 +1,77 @@
+.grid-module{
+  background:#fafafa;
+  .icon-items{
+    @include column(2,2rem);
+
+    @include breakpoint(mobile){
+      @include column(1,0);
+    }
+  }
+  .grid-item{
+      background:#fff;
+      padding:  2rem 3rem 2.5rem;
+
+  }
+
+}
+
+.grid-item{
+  @include avoid();
+  margin:0 0 2em;
+  padding:  0 3rem;
+  width:  100%;
+  // float:left;
+
+  // &:first-child{
+  //   margin-top:0;
+  //   h4{
+  //     margin-top:0;
+  //   }
+  // }
+
+  @include breakpoint(tablet){
+    padding:0;
+  }
+}
+// making flex version because of IE compatibility issues
+.grid-module-flex{
+
+  background:#fafafa;
+  .icon-items{
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    flex-direction: row;
+    }
+  .grid-item-flex{
+      background:#fff;
+      padding:  2rem 3rem 2.5rem;
+  }
+}
+.checklist-module {
+  .icon-items{
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+
+  }
+}
+.grid-item-flex{
+  margin:0 0 2em;
+  padding:  0 3rem;
+  width:  calc(50% - 1em);
+
+  margin-right: 1em;
+
+  @include breakpoint(tablet){
+    padding:0;
+  }
+  @include breakpoint(small-mobile){
+    width: 100%;
+    padding:0;
+    margin-right: 1em;
+  }
+}

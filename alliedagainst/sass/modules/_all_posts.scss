@@ -1,0 +1,176 @@
+.all-posts {
+    &.disposal_resources {
+        background: $lightergreen;
+            #sorting-form {
+                align-items: center;
+                justify-content: center;
+                label, span {
+                  cursor: pointer;
+                }
+            }
+    }
+    .news-card {
+        background: #FCF6EC;
+        .info {
+            width: 70%;
+            @include breakpoint(mobile) {
+              width: 100%;
+            }
+        }
+    }
+    &.all_resources {
+        background: #fff;
+            #sorting-form {
+                align-items: center;
+                justify-content: space-around;
+                label, span {
+                  cursor: pointer;
+                }
+            }
+        .resource {
+            background:#FCF6EC;
+        }
+        .disposal-location-card {
+            background: #FCF6EC;
+            margin: 0rem 1rem 2rem;
+        }
+    }
+    #sorting-form {
+        width: 60%;
+        max-width: 600px;
+        div:first-child {
+            justify-content: space-around;
+            width: 100%;
+            margin: 2rem 0rem;
+            @include breakpoint(mobile){
+                justify-content: center;
+                flex-direction: column;
+                align-items: flex-start;
+                margin: 0rem;
+                label {
+                    padding: 1rem 0rem;
+                    cursor: pointer;
+                    span {
+                    }
+                }
+            }
+        }
+        input[type=radio]{
+            display: none;
+        }
+        input[type=radio] + span {
+            padding-bottom: .5rem;
+            font-family: $headersfont;
+            cursor: pointer;
+        }
+        input[type=radio]:checked + span{
+            border-bottom: 3px solid $primarycolor;
+        }
+        p {
+            color: $primarycolor;
+        }
+        @include breakpoint(tablet){
+            width: 80%;
+        }
+        @include breakpoint(mobile){
+            width: 100%;
+        }
+        .form-header{
+            margin: 0 auto;
+            .icon {
+                width: 135px;
+                margin: 3rem auto;
+            }
+            h2{
+                text-align: center;
+                font-weight: bold;
+                border-bottom: 5px solid $primarycolor;
+                padding-bottom: 1rem;
+            }
+            p{
+                color: $primarycolor;
+            }
+        }
+        .select-holder {
+            width: 300px;
+            margin: 2rem auto 0rem;
+            position: relative;
+             &:after {
+                content: "";
+                position: absolute;
+                width: 13px;
+                height: 10px;
+                background: url(../images/caret-down.svg) no-repeat center center;
+                background-size: cover;
+                font-size: 0;
+                right: 15px;
+                top: 50%;
+                @include transform(translateY(-50%));
+                line-height: 0;
+            }
+        select {
+            -webkit-appearance: none;
+            outline: none;
+            background: $primarycolor;
+            color: $tertiarycolor;
+            width: 100%;
+            border-style: none;
+            padding: 1rem;
+            border-radius: 0px;
+        }
+    }
+    }
+    .all-posts-container {
+         width: 100%;
+         max-width: 1200px;
+        @include breakpoint(tablet){
+            width: 80%;
+        }
+        @include breakpoint(mobile){
+            width: 100%;
+            padding: 1rem;
+        }
+    }
+    .fetched-posts {
+        margin: 2rem auto;
+        width: 100%;
+        justify-content: center;
+        max-width: 1200px;
+
+    }
+    .pagination {
+        width: 100%;
+        justify-content: space-between;
+        margin: 4rem auto;
+        @include breakpoint(mobile){
+          margin-top: 2rem;
+        }
+        @include breakpoint(smallmobile) {
+          .flex-30 {
+            width: 50%;
+            order: 2
+          }
+          .page-num {
+            width: 100%;
+            order: 1;
+          }
+          // flex-wrap: nowrap;
+        }
+        .pager {
+          a {
+            font-size: .9rem;
+          }
+            @include breakpoint(mobile){
+                text-align: center;
+                margin: 1rem auto;
+            }
+        }
+        p{
+            color: $primarycolor;
+            font-family: $headersfont;
+            font-size: .9rem;
+            margin: 0 auto;
+            text-transform: none;
+        }
+    }
+}

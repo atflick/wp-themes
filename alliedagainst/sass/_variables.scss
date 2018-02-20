@@ -1,0 +1,34 @@
+/*---- Fonts -------*/
+$regularfont: 'AvenirNextLTW01-Regular';
+$headersfont: 'Avenir Next LT W01 Bold';
+$primaryfont: 'AvenirNextLTW01-Medium';
+$demifont: 'Avenir Next LT W01 Demi';
+
+$secondaryfont: 'Merriweather', serif;
+/*---- Color -------*/
+$primarycolor:#07496B;
+$secondarycolor:#E68049;
+$lightsecondary: #F2B892;
+$tertiarycolor: #fff;
+$cream: #FCF6EC;
+$lightgreen: #ADCDCD;
+$lightergreen: #C9DEDF;
+
+$offwhite: #EAF2F0;
+.lightblue, .lightblue p{
+	color:rgba(255,255,255,0.85);
+}
+.white, .white p{
+	color:#fff;
+}
+hr.white{
+	background:rgba(255,255,255,.8);
+}
+
+.orange{
+	color:$secondarycolor;
+}
+
+.darkprimary{
+	color:$primarycolor;
+}

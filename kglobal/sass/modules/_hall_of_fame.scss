@@ -1,0 +1,17 @@
+.hall-of-fame {
+  background: $blue;
+  h2 {
+    margin-bottom: 2rem;
+  }
+  .photo {
+    width: 120px;
+    height: 120px;
+    margin: 1rem;
+    border: 0px solid;
+    border-radius: 50%;
+    @include breakpoint(smallmobile) {
+      width: 80px;
+      height: 80px;
+    }
+  }
+}

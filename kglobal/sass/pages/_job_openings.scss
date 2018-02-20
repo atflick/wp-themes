@@ -1,0 +1,57 @@
+.job-post {
+  .hero {
+    background: $blue;
+    padding-top: 8rem;
+    padding-bottom: 6rem;
+    z-index: 1;
+    // height: auto;
+    @include breakpoint(mobile) {
+      height: auto;
+      min-height: 50vh;
+      padding-top: 6rem;
+      padding-bottom: 4rem;
+    }
+    &:after {
+      display: none;
+    }
+    h1 {
+      // padding-left: 0;
+      // border: none;
+    }
+  }
+
+  .job-body {
+    @include sidepadding(10%, 15%, 4rem, 2rem);
+    aside{
+      padding: .5rem 1rem .5rem 0;
+      h5 {
+        @include primaryfont();
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+      }
+      .social {
+        a {
+          display: block;
+          margin-bottom: 1rem;
+          width: 30px;
+          height: 24px;
+          text-align: center;
+          img {
+            width: auto;
+            height: 100%;
+            &.twitter-icon {
+              width: 90%;
+            }
+          }
+        }
+        @include breakpoint(mobile) {
+          a {
+            display: inline-block;
+            margin-right: 1.2rem;
+          }
+          padding-bottom: 1rem;
+        }
+      }
+    }
+  }
+}

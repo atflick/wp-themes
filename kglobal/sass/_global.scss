@@ -1,0 +1,198 @@
+.line-after {
+  &:after {
+    content: " ";
+    height: 3px;
+    left: 0;
+    bottom: -1rem;
+    position: relative;
+    display: block;
+    border-top: 3px solid $accentorange;
+    padding-top: 2rem;
+
+  }
+  &.short::after {
+    width: 70px;
+  }
+}
+
+.bg-blue {
+  background: $blue;
+}
+.bg-cream {
+  background: $cream;
+}
+
+.top-slant {
+
+  &:before {
+    background: #fff;
+    content: '';
+    display: block;
+    height: 300px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    z-index: -1;
+    -webkit-backface-visibility: hidden;
+    top: 0;
+    transform: skewY(3.5deg);
+    transform-origin: 100% 0;
+  }
+}
+.top-module-slant {
+
+  &:before {
+    background: #fff;
+    content: '';
+    display: block;
+    height: 50%;
+    left: 0;
+    position: absolute;
+    right: 0;
+
+    -webkit-backface-visibility: hidden;
+    top: -150px;
+    transform: skewY(3.5deg);
+    transform-origin: 100% 0;
+  }
+}
+
+.bottom-slant {
+  position: relative;
+
+  *{
+    z-index: 4;
+  }
+
+  &:after{
+    background: #fff;
+    content: '';
+    display: block;
+    height: 50%;
+    left: 0;
+    position: absolute;
+    right: 0;
+    z-index: 2;
+    -webkit-backface-visibility: hidden;
+    bottom: 0;
+    transform: skewY(-3.5deg);
+    transform-origin: 100%;
+  }
+  &.from-left {
+    &:after{
+      transform: skewY(3.5deg);
+      transform-origin: 0 100%;
+    }
+  }
+
+  &.white {
+    &:after {
+      background: #fff;
+    }
+    background: #fff;
+  }
+}
+
+.bottom-slant+.top-slant {
+  // height: 110%;
+}
+
+.hero-bottom-slant {
+  overflow: hidden;
+  &:before {
+    background: #fff;
+    content: '';
+    display: block;
+    height: 300px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    z-index: 4;
+    -webkit-backface-visibility: hidden;
+    bottom: -300px;
+    transform: skewY(3.5deg);
+    transform-origin: 100% 0;
+  }
+}
+
+.orangeline {
+  position: relative;
+  * {
+    text-align: left;
+  }
+  &:before {
+    content: "";
+    left: -25px;
+    top: -10%;
+    position: absolute;
+    height: 120%;
+    width: 5px;
+    background: $accentorange;
+    @include breakpoint(mobile) {
+      left: -15px;
+    }
+  }
+}
+.hide-opacity {
+  opacity: 0;
+}
+.hide {
+  display: none !important;
+  opacity: 0;
+}
+
+.error-404 {
+  position: relative;
+  justify-content: flex-end;
+  h1, p {
+    color: $darkblue;
+  }
+  height: 70vh;
+  min-height: 400px;
+  .squirrel {
+    background: url('../images/illus-squirrel-404.jpg') no-repeat left;
+    background-size: contain;
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+}
+
+.content-area {
+  margin: 0 auto;
+  max-width: 1000px;
+  padding: 2rem 0;
+}
+
+.logo-separator {
+  height: 0;
+  width: 100%;
+  position: relative;
+  overflow: visible;
+  .kglobal-logo-accent {
+    position: absolute;
+    left: 45%;
+    top: -45px;
+    z-index: 5;
+    img {
+      width: 90px;
+      height: 89px;
+    }
+    @include breakpoint(mobile) {
+      display: none;
+    }
+  }
+}
+
+.kglobal-logo-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url('../images/kglobal_bg_pattern.png');
+  background-repeat: repeat-y;
+  background-position: center;
+  z-index: 1;
+}

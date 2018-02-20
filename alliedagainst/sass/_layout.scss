@@ -1,0 +1,243 @@
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  &.module-padding {
+    padding: 3rem;
+    @include breakpoint(verylarge) {
+      padding: 4rem 5%;
+    }
+    @include breakpoint(mobile) {
+      padding: 2rem 1.5rem;
+    }
+  }
+  &.column {
+    flex-direction: column;
+  }
+  &.space-between {
+    justify-content: space-between;
+  }
+  &.align-vert-center {
+    align-items: center;
+  }
+  &.justify-center {
+    justify-content: center;
+  }
+  &.center-center {
+    justify-content: center;
+    align-items: center;
+  }
+  .flex-10 {
+    width: 10%;
+  }
+  .flex-15 {
+    width: 15%;
+  }
+  .flex-20 {
+    width: 20%;
+  }
+  .flex-30 {
+    width: 30%;
+  }
+  .flex-35 {
+    width: 35%;
+  }
+  .flex-40 {
+    width: 40%;
+  }
+  .flex-45 {
+    width: 45%;
+  }
+  .flex-50 {
+    width: 50%;
+  }
+  .flex-55 {
+    width: 55%;
+  }
+  .flex-60 {
+    width: 60%;
+  }
+  .flex-70 {
+    width: 70%;
+  }
+  .flex-80 {
+    width: 80%;
+  }
+  .flex-90 {
+    width: 90%;
+  }
+  .flex-100 {
+    width: 100%;
+  }
+  .flex-1-3 {
+    // width:calc(100% / 3);
+    // because ie sux
+    width: 33.3%;
+  }
+  .flex-2-3 {
+    // width:calc(100% / 3 * 2 );
+    // because ie sux
+    width: 66.6%;
+  }
+  .flex-1-4 {
+    width: 25%;
+  }
+  .flex-1-6 {
+    width: calc(100% / 6);
+  }
+  .flex-3-4 {
+    width: calc(100% / 4 * 3);
+  }
+  .flex-col {
+    position: relative;
+    @include breakpoint(mobile) {
+      width: 100%;
+    }
+  }
+  .padding-2 {
+    padding-right: 2rem;
+  }
+  .padding-10 {
+    padding-right: 10rem;
+    @include breakpoint(mobile) {
+      padding-right: 2rem;
+    }
+  }
+}
+
+.padding-4 {
+  padding: 4rem;
+}
+
+.padding-2-4 {
+  padding: 2rem 4rem;
+}
+
+.padding-0-4 {
+  padding: 0rem 4rem;
+}
+
+.flex-padding {
+  padding: 5rem 5rem 10rem;
+  @include breakpoint(tablet) {
+    padding: 3rem 2rem 8rem;
+  }
+  @include breakpoint(mobile) {
+    padding: 2rem;
+    margin: 0;
+  }
+  .bottom {
+    width: calc(100% - 10rem);
+    @include breakpoint(mobile) {
+      width: 100%;
+    }
+  }
+}
+
+.max-width {
+  max-width: 1540px;
+  margin: 0 auto;
+  &.flex-padding {
+    padding-bottom: 5rem;
+  }
+}
+
+.flex-base {
+  padding: 6rem 0;
+  @include breakpoint(mobile) {
+    padding: 3rem 0;
+  }
+}
+
+.hide {
+  display: none;
+  opacity: 0;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0rem;
+  a {
+    text-align: center;
+  }
+  @include breakpoint(mobile) {
+    min-width: 50%;
+  }
+  @include breakpoint(smallmobile) {
+    width: 100%;
+  }
+  >a,
+  div {
+    border-radius: 30px;
+    padding: 1rem 3rem;
+    text-transform: uppercase;
+    font-size: .9rem;
+    font-family: $demifont;
+    &:hover {
+      cursor: pointer;
+      opacity: .8;
+    }
+  }
+  .orange-button {
+    background: $secondarycolor;
+    color: #fff;
+  }
+  .white-button {
+    background: #fff;
+    color: $secondarycolor;
+  }
+  .cream-button {
+    background: $cream;
+    color: $secondarycolor;
+  }
+  .blue-button {
+    background: $primarycolor;
+    color: #fff;
+  }
+  .button {
+    i {
+      position: relative;
+      .cta-icon {
+        position: absolute;
+        left: .5rem;
+        top: -.2rem;
+        height: 20px;
+      }
+    }
+  }
+}
+
+.pager {
+  border-radius: 0px;
+  background: transparent;
+  color: $primarycolor;
+  position: relative;
+  padding: .5rem;
+  font-size: .9rem;
+  font-family: $headersfont;
+  cursor: pointer;
+  &#next:after,
+  &#previous:after {
+    content: '';
+    width: 12px;
+    height: 16px;
+    top: 50%;
+    @include transform(translateY(-50%));
+    position: absolute;
+    background-size: cover;
+    background: url(../images/caret.svg) no-repeat center center;
+  }
+  &#next:after {
+    right: -17px;
+    @include breakpoint(mobile) {
+      // right: 25px;
+    }
+  }
+  &#previous:after {
+    @include transform(scaleX(-1) translateY(-50%));
+    left: -17px;
+    @include breakpoint(mobile) {
+      // left: 25px;
+    }
+  }
+}

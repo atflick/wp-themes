@@ -1,0 +1,84 @@
+footer{
+	background:$secondarycolor;
+	padding:2rem 6rem;
+	width: 100%;
+		a {
+			color: #fff;
+		}
+	@include breakpoint(verylarge){
+		padding: 4rem 7%;
+	}
+	@include breakpoint(mobile){
+		padding: 2rem 1.5rem;
+	}
+	.footer-main-container {
+		justify-content: space-between;
+		.frequently-asked-questions {
+			> p {
+				font-family: $headersfont;
+				text-transform: uppercase;
+				font-size: .9rem;
+				line-height: normal;
+			}
+			@include breakpoint(tablet){
+				width: 100%;
+			}
+			.questions-container {
+				#menu-footer {
+					columns: 2;
+					@include breakpoint(smallmobile){
+						columns: 1;
+					}
+					li {
+						display: inline-block;
+						height: auto;
+						padding: .5rem;
+						width: 100%;
+						font-size: .9rem;
+						a {
+							font-size: .9rem;
+						}
+					}
+				}
+			}
+		}
+		.additional-footer-resources {
+			a {
+				padding: .5rem 0rem;
+				font-size: .9rem;
+			}
+			@include breakpoint(tablet){
+				width: 100%;
+				padding: 2rem 0rem;
+			}
+		}
+	}
+	.copyright {
+		padding: 4rem 0rem 2rem 0rem;
+		p,a {
+			font-size: .9rem;
+		}
+		.flex-container {
+
+			a:first-child {
+				padding-right: 3rem;
+			}
+		}
+	}
+
+	.button-container {
+		padding: .5rem 0;
+		justify-content: flex-start;
+		.button {
+			width: 100%;
+			background: $tertiarycolor;
+			color: $secondarycolor;
+			font-family: $demifont;
+			padding: 1rem 25px 1rem 0 !important;
+			max-width: 300px;
+			display: flex;
+			justify-content: center;
+			font-size: .9rem;
+		}
+	}
+}
